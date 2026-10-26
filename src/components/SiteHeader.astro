@@ -21,6 +21,31 @@ const languageHref = isEnglish ? `${base}${active ? `${active}/` : ''}` : `${bas
         <a href={route('contact')} aria-current={active === 'contact' ? 'page' : undefined}>{labels.contact}</a>
       </nav>
       <a class="language-link" href={languageHref} lang={isEnglish ? 'pt-PT' : 'en'} aria-label={isEnglish ? 'Ver em português' : 'View in English'}>{isEnglish ? 'PT' : 'EN'}</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label={isEnglish ? 'Switch to light theme' : 'Mudar para tema claro'} title={isEnglish ? 'Change colour theme' : 'Alterar tema de cores'}><span class="theme-icon" aria-hidden="true">◐</span></button>
     </div>
   </div>
 </header>
+<script is:inline>
+  (() => {
+    const root = document.documentElement;
+    const button = document.querySelector('[data-theme-toggle]');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let preference = null;
+    try { preference = localStorage.getItem('portfolio-theme'); } catch { /* Storage may be unavailable. */ }
+    const applyTheme = (theme) => {
+      root.dataset.theme = theme;
+      if (button) {
+        const english = root.lang === 'en';
+        button.setAttribute('aria-label', theme === 'dark' ? (english ? 'Switch to light theme' : 'Mudar para tema claro') : (english ? 'Switch to dark theme' : 'Mudar para tema escuro'));
+        button.title = english ? 'Change colour theme' : 'Alterar tema de cores';
+        button.querySelector('.theme-icon').textContent = theme === 'dark' ? '☼' : '◐';
+      }
+    };
+    applyTheme(root.dataset.theme || (preference === 'light' || preference === 'dark' ? preference : (systemDark ? 'dark' : 'light')));
+    button?.addEventListener('click', () => {
+      const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('portfolio-theme', nextTheme); } catch { /* Theme still applies for this page. */ }
+      applyTheme(nextTheme);
+    });
+  })();
+</script>
