@@ -19,4 +19,12 @@ Portfolio pessoal bilingue feito com Astro, TypeScript e CSS. O português europ
 - `src/data/projects.ts`: consulta e filtra os projectos do idioma pedido.
 - `src/styles/global.css`: estilos e tokens visuais globais.
 
-Os projectos incluídos são conceitos demonstrativos ou exercícios de aprendizagem, não trabalho de clientes. Actualizar `site` em `astro.config.mjs` quando existir um domínio público, para activar URLs canónicos.
+## Estudos de caso
+
+Os estudos de caso usam o corpo dos ficheiros Markdown da colecção `projects`. Para publicar uma página individual, adicionar `caseStudy: true` ao frontmatter e conteúdo ao corpo. Os cartões só mostram o link quando ambos existem; os restantes projectos continuam como conceitos na listagem.
+
+As rotas `src/pages/projects/[slug].astro` e `src/pages/en/projects/[slug].astro` geram apenas as entradas elegíveis. O componente `CaseStudy.astro` partilha a apresentação, o índice de secções e a galeria, preservando os textos de cada idioma. Traduções usam `translationKey` partilhada quando os slugs diferem entre idiomas; com o mesmo slug, a correspondência funciona sem esse campo. O selector abre a página equivalente. Sem tradução, o selector mantém o acesso à listagem no outro idioma.
+
+Os quatro projectos têm estudos de caso PT/EN: Smart Clinic Assistant, Forma & Grão, PRISMA e Pauta. As aplicações mantêm-se em pastas independentes; o portfolio contém apenas apresentação, conteúdo e capturas reais. A auditoria actualizada em `docs/project-evidence-audit.md` regista código inspeccionado, testes reexecutados e limitações. As capturas das três aplicações recentes foram recolhidas dos previews locais; não existem links inventados para demonstrações públicas.
+
+Os projectos incluídos são aplicações pessoais e demonstrativas, não trabalho de clientes. O `site` em `astro.config.mjs` já aponta para `https://tiagoapsantos.github.io`, com publicação na raiz e URLs canónicos correspondentes. Esta integração fica apenas em revisão local, sem publicação.

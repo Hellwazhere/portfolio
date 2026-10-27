@@ -1,0 +1,54 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/case-study.css';
+interface Props { project: CollectionEntry<'projects'>; alternateHref?: string; }
+const { project, alternateHref } = Astro.props;
+const { Content, headings } = await render(project);
+const { locale, title, description, kind, tags, images } = project.data;
+const english = locale === 'en';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const projectsHref = `${base}${english ? 'en/' : ''}projects/`;
+const sections = headings.filter((heading) => heading.depth === 2);
+---
+<BaseLayout locale={locale} active="projects" alternateHref={alternateHref} title={`${title} · ${english ? 'Case study' : 'Estudo de caso'}`} description={description}>
+  <article class="case-study">
+    <header class="container case-study-header">
+      <a class="text-link case-study-back" href={projectsHref}><span aria-hidden="true">←</span> {english ? 'All projects' : 'Todos os projectos'}</a>
+      <p class="eyebrow">{english ? 'Project / Case study' : 'Projecto / Estudo de caso'}</p>
+      <h1>{title}</h1>
+      <p class="page-intro">{description}</p>
+      <dl class="case-study-facts">
+        <div><dt>{english ? 'Status' : 'Estado'}</dt><dd>{kind}</dd></div>
+        <div><dt>{english ? 'Evidence' : 'Material de apoio'}</dt><dd>{english ? 'Inspected code, documentation and captures' : 'Código inspeccionado, documentação e capturas'}</dd></div>
+        <div><dt>{english ? 'Technologies' : 'Tecnologias'}</dt><dd><div class="tag-list">{tags.map((tag) => <span class="tag">{tag}</span>)}</div></dd></div>
+      </dl>
+    </header>
+    <div class="container case-study-layout">
+      <nav class="case-study-index" aria-label={english ? 'In this case study' : 'Neste estudo de caso'}>
+        <p class="eyebrow">{english ? 'In this case study' : 'Neste estudo de caso'}</p>
+        <ol>{sections.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}
+          {images?.length && <li><a href="#screenshots">{english ? 'Interface in context' : 'Interface em contexto'}</a></li>}
+        </ol>
+      </nav>
+      <div class="case-study-main">
+        <div class="case-study-prose"><Content /></div>
+        {images?.length && <section class="case-study-gallery" aria-labelledby="screenshots">
+          <p class="eyebrow">{english ? 'Visual walkthrough' : 'Percurso visual'}</p>
+          <h2 id="screenshots">{english ? 'Interface in context' : 'Interface em contexto'}</h2>
+          <p>{english ? 'Real captures of the local application in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da aplicação local em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.'}</p>
+          {images.map((image, index) => <figure>
+            <a href={`${base}${image.src.replace(/^\/+/, '')}`} target="_blank" rel="noopener noreferrer" aria-label={`${english ? 'Open image' : 'Abrir imagem'}: ${image.alt}`}>
+              <img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} loading="lazy" decoding="async" />
+            </a>
+            <figcaption><span class="project-index">{String(index + 1).padStart(2, '0')}</span> {image.alt}</figcaption>
+          </figure>)}
+        </section>}
+      </div>
+    </div>
+    <footer class="container case-study-footer">
+      <p>{english ? 'Explore the other personal projects and case studies.' : 'Explore os restantes projectos pessoais e estudos de caso.'}</p>
+      <a class="text-link" href={projectsHref}><span aria-hidden="true">←</span> {english ? 'Back to projects' : 'Regressar aos projectos'}</a>
+    </footer>
+  </article>
+</BaseLayout>

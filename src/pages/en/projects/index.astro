@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getProjects } from '../../../data/projects';
+import { getProjects, projectHref } from '../../../data/projects';
 const projects = await getProjects('en');
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
-<BaseLayout locale="en" active="projects" title="Projects" description="Demonstration concepts and learning exercises in marketing, AI, automation and web development.">
-  <section class="container page-heading projects-heading"><p class="eyebrow">Work in progress</p><h1>Projects and explorations</h1><p class="page-intro">This initial selection contains demonstration examples only. It does not represent client work or achieved results.</p></section>
+<BaseLayout locale="en" active="projects" title="Projects" description="Case studies of personal applications in web development, data analysis, operations and template-based editorial assistance.">
+  <section class="container page-heading projects-heading"><p class="eyebrow">Personal projects</p><h1>Projects and case studies</h1><p class="page-intro">Demonstration applications with inspected code, tests and limitations identified in each case study. These are not commissioned projects or commercial results.</p></section>
   <section class="container projects-section" aria-label="Project list"><div class="project-grid project-grid-wide">{projects.map((project, index) => <article class:list={['project-card', 'project-card-rich', project.images?.length ? 'project-card-featured' : 'project-card-concept']}>
-    <div class="project-card-copy"><span class="project-index">{String(index + 1).padStart(2, '0')}</span><span class="project-kind">{project.kind}</span><h2>{project.title}</h2><p>{project.description}</p><div class="tag-list">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div></div>
+    <div class="project-card-copy"><span class="project-index">{String(index + 1).padStart(2, '0')}</span><span class="project-kind">{project.kind}</span><h2>{project.title}</h2><p>{project.description}</p><div class="tag-list">{project.tags.map((tag) => <span class="tag">{tag}</span>)}</div>{project.caseStudy && <a class="text-link case-study-link" aria-label={`Read case study: ${project.title}`} href={projectHref('en', project.slug)}>Read case study <span aria-hidden="true">→</span></a>}</div>
     {project.images?.length && <div class:list={['project-gallery', project.slug === 'smart-clinic-assistant' && 'project-gallery-smart']}>{project.images.map((image) => <a class="project-image-link" href={`${base}${image.src.replace(/^\/+/, '')}`} target="_blank" rel="noreferrer" aria-label={`Open image: ${image.alt}`}><img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} loading="lazy" decoding="async" /></a>)}</div>}
   </article>)}</div></section>
 </BaseLayout>

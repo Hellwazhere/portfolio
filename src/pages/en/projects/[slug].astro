@@ -1,0 +1,8 @@
+---
+import CaseStudy from '../../../components/CaseStudy.astro';
+import { getCaseStudyPages } from '../../../data/projects';
+export async function getStaticPaths() {
+  return getCaseStudyPages('en');
+}
+---
+<CaseStudy {...Astro.props} />

@@ -9,6 +9,8 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     tags: z.array(z.string()),
+    caseStudy: z.boolean().default(false),
+    translationKey: z.string().optional(),
     images: z.array(z.object({ src: z.string(), alt: z.string() })).optional(),
   }),
 });
