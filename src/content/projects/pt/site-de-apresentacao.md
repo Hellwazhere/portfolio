@@ -4,6 +4,8 @@ kind: Projecto pessoal · Demonstração funcional
 title: Forma & Grão — Business Website
 caseStudy: true
 translationKey: business-website
+demoUrl: https://tiagoapsantos.github.io/business-website/
+sourceUrl: https://github.com/tiagoapsantos/business-website
 description: Website de um atelier fictício, com quatro páginas, formulário validado e pedido descarregável em TXT. Uma demonstração de desenvolvimento Web sem backend ou envio de mensagens.
 tags:
   - HTML
@@ -50,7 +52,7 @@ Os registos de verificação da aplicação documentam ainda ensaios do formulá
 
 ## Limitações e disponibilidade
 
-Não há envio de email, backend, encomendas, orçamento ou armazenamento persistente. O pedido fica na página até limpar ou recarregar; só o ficheiro descarregado permanece no dispositivo. A interface é PT-PT e não há demonstração pública ou repositório específico confirmado para ligar a partir deste estudo.
+Não há envio de email, backend, encomendas, orçamento ou armazenamento persistente. O pedido fica na página até limpar ou recarregar; só o ficheiro descarregado permanece no dispositivo. A interface é PT-PT. A demonstração pública e o código estão disponíveis nos links no início deste estudo.
 
 ## Aprendizagens e próximos passos
 

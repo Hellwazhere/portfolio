@@ -4,6 +4,8 @@ kind: Personal project · Functional demonstration
 title: Forma & Grão — Business Website
 caseStudy: true
 translationKey: business-website
+demoUrl: https://tiagoapsantos.github.io/business-website/
+sourceUrl: https://github.com/tiagoapsantos/business-website
 description: A four-page website for a fictional workshop, with validated contact fields and a downloadable TXT request. A web development demonstration with no backend or message delivery.
 tags:
   - HTML
@@ -50,7 +52,7 @@ The application's verification record also documents form/download checks, keybo
 
 ## Limitations and availability
 
-There is no email delivery, backend, ordering, quoting or persistent storage. The request stays on the page until clearing or reloading; only a downloaded file remains on the device. The application is PT-PT only, with no confirmed public demo or project-specific repository to link from this case study.
+There is no email delivery, backend, ordering, quoting or persistent storage. The request stays on the page until clearing or reloading; only a downloaded file remains on the device. The application is PT-PT only. The live demo and source code are available through the links at the start of this case study.
 
 ## Learning and next steps
 
