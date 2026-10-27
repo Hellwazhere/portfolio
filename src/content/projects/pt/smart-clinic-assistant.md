@@ -3,6 +3,8 @@ locale: pt
 kind: Demonstração local
 title: Smart Clinic Assistant
 caseStudy: true
+demoUrl: https://tiagoapsantos.github.io/smart-clinic-assistant/
+sourceUrl: https://github.com/tiagoapsantos/smart-clinic-assistant
 description: Demonstração fictícia de gestão local de marcações, com formulário de pedido e painel administrativo para pesquisa, filtros, consulta de detalhes e actualização de estados. Guarda os dados no localStorage; não tem backend nem autenticação e não utiliza dados reais de pacientes.
 tags:
   - Astro
@@ -58,7 +60,7 @@ A demonstração é documentada como não tendo autenticação. Assim, a existê
 
 O projecto utiliza dados fictícios, sem backend nem autenticação. Não há evidência de integração com agendas externas, envio de notificações ou utilização por uma clínica. Não são apresentados resultados de negócio, testes clínicos ou métricas de utilização.
 
-As três capturas em português foram obtidas da versão local de produção da aplicação, com os exemplos fictícios incluídos no projecto. Não há comando de testes nem suite automatizada configurada nessa aplicação; não se atribuem os testes dos outros projectos a este caso. Não foi confirmado um URL público de demonstração ou repositório específico.
+As três capturas em português foram obtidas da versão local de produção da aplicação, com os exemplos fictícios incluídos no projecto. Não há comando de testes nem suite automatizada configurada nessa aplicação; não se atribuem os testes dos outros projectos a este caso.
 
 ## Aprendizagens e próximos passos
 

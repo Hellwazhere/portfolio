@@ -3,6 +3,8 @@ locale: en
 kind: Local demonstration
 title: Smart Clinic Assistant
 caseStudy: true
+demoUrl: https://tiagoapsantos.github.io/smart-clinic-assistant/
+sourceUrl: https://github.com/tiagoapsantos/smart-clinic-assistant
 description: A fictional local appointment-management demo with a request form and admin dashboard for search, filtering, appointment details and status updates. It persists data in localStorage; there is no backend or authentication, and it uses no real patient data.
 tags:
   - Astro
@@ -58,7 +60,7 @@ The demonstration is documented as having no authentication. An administrative d
 
 The project uses fictional data, with no backend or authentication. There is no evidence of external calendar integration, notification delivery or use by a clinic. No business results, clinical tests or usage metrics are claimed.
 
-The three Portuguese captures were taken from the application's local production build, using the fictional examples included in the project. That application has no configured test command or automated suite; tests from other projects are not attributed to it. No public demo URL or project-specific repository has been confirmed.
+The three Portuguese captures were taken from the application's local production build, using the fictional examples included in the project. That application has no configured test command or automated suite; tests from other projects are not attributed to it.
 
 ## Learning and next steps
 
