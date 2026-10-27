@@ -15,7 +15,7 @@ const routePath = pathname === baseRoot || pathname === base
 const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : undefined;
 ---
 <!doctype html>
-<html lang={locale === 'pt' ? 'pt-PT' : 'en'}>
+<html lang={locale === 'pt' ? 'pt-PT' : 'en'} data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,10 +26,9 @@ const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : unde
         const root = document.documentElement;
         try {
           const savedTheme = localStorage.getItem('portfolio-theme');
-          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          root.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : (systemDark ? 'dark' : 'light');
+          root.dataset.theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
         } catch {
-          root.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          root.dataset.theme = 'dark';
         }
       })();
     </script>

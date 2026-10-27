@@ -4,6 +4,8 @@ kind: Projecto pessoal · Demonstração funcional
 title: PRISMA — Marketing Dashboard
 caseStudy: true
 translationKey: marketing-dashboard
+demoUrl: https://tiagoapsantos.github.io/marketing-dashboard/
+sourceUrl: https://github.com/tiagoapsantos/marketing-dashboard
 description: Dashboard com oito indicadores, filtros combinados, gráficos e CSV, construído sobre sete campanhas fictícias. Cálculos testáveis e dados locais, sem ligação a plataformas de publicidade.
 tags:
   - JavaScript
@@ -54,7 +56,7 @@ Dados, cálculos, formatação, gráficos, apresentação e exportação são m�
 
 Conversão é uma acção fictícia atribuída ao mesmo dia e campanha. Não se modelam utilizadores únicos, deduplicação, janelas de atribuição, receita ou ROAS. Plataformas reais podem usar definições diferentes. O estado de campanha é fixo no conjunto, não um histórico.
 
-Não há importação, edição ou persistência de dados, backend, sincronização ou gestão de tarefas. A interface é PT-PT. Não existe demonstração pública ou repositório específico confirmado para este estudo.
+Não há importação, edição ou persistência de dados, backend, sincronização ou gestão de tarefas. A interface é PT-PT.
 
 ## Aprendizagens e evolução possível
 
