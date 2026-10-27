@@ -39,7 +39,7 @@ const sections = headings.filter((heading) => heading.depth === 2);
           <p>{english ? 'Real captures of the local application in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da aplicação local em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.'}</p>
           {images.map((image, index) => <figure>
             <a href={`${base}${image.src.replace(/^\/+/, '')}`} target="_blank" rel="noopener noreferrer" aria-label={`${english ? 'Open image' : 'Abrir imagem'}: ${image.alt}`}>
-              <img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} loading="lazy" decoding="async" />
+              <img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
             </a>
             <figcaption><span class="project-index">{String(index + 1).padStart(2, '0')}</span> {image.alt}</figcaption>
           </figure>)}

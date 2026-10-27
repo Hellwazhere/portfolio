@@ -10,10 +10,18 @@ tags:
   - CSS
   - localStorage
 images:
-  - src: /images/projects/smart-clinic-form.png
-    alt: Captura de ecrã do formulário de pedido de marcação do Smart Clinic Assistant.
-  - src: /images/projects/smart-clinic-dashboard.png
-    alt: Captura de ecrã do painel administrativo com totais, pesquisa, filtros e gestão de estados.
+  - src: /images/projects/smart-clinic-form.jpg
+    width: 1265
+    height: 1432
+    alt: Formulário completo de pedido de marcação, com contacto, serviço, disponibilidade e aviso de demonstração local.
+  - src: /images/projects/smart-clinic-dashboard.jpg
+    width: 1265
+    height: 1359
+    alt: Painel com contadores, pesquisa, filtro por estado e três pedidos fictícios em estados distintos.
+  - src: /images/projects/smart-clinic-detail.jpg
+    width: 1265
+    height: 712
+    alt: Detalhe do pedido fictício de Ana Demonstração, com contacto, serviço, disponibilidade, estado e mensagem administrativa.
 ---
 
 ## Contexto e objectivo
@@ -30,7 +38,7 @@ Nas capturas, a primeira vista dá prioridade ao preenchimento e explica onde fi
 
 ## Funcionalidades confirmadas no código
 
-O código da aplicação independente foi agora inspeccionado: componentes Astro, tipos TypeScript, scripts do formulário e painel e módulo de armazenamento confirmam o formulário, pesquisa, filtros, detalhes, estados e persistência em `localStorage`. As capturas reutilizadas mostram:
+O código da aplicação independente foi inspeccionado: componentes Astro, tipos TypeScript, scripts do formulário e painel e módulo de armazenamento confirmam o formulário, pesquisa, filtros, detalhes, estados e persistência em `localStorage`. As capturas actuais da aplicação local mostram:
 
 - **Pedido estruturado:** campos para nome, email, telefone, serviço, data, hora e mensagem administrativa opcional, com uma acção para guardar o pedido.
 - **Visão de conjunto:** contadores de pedidos totais, pendentes, confirmados e cancelados.
@@ -38,7 +46,7 @@ O código da aplicação independente foi agora inspeccionado: componentes Astro
 - **Acções por pedido:** controlos para ver detalhes, alterar o estado e apagar; existe também um controlo para repor dados de demonstração.
 - **Transparência no ecrã:** avisos de demonstração fictícia, ausência de envio para uma clínica e instruções para não introduzir informação de saúde.
 
-Os scripts implementam a criação de pedidos, contadores, pesquisa combinada com estado, diálogo de detalhes, alteração de estado e remoção/reposição com confirmação. Esta revisão confirma a implementação pela leitura do código; não executou novamente essas interacções no browser. A aplicação mantém-se separada do portfolio.
+Os scripts implementam a criação de pedidos, contadores, pesquisa combinada com estado, diálogo de detalhes, alteração de estado e remoção/reposição com confirmação. Para actualizar as capturas, a aplicação foi executada localmente e foram verificados no browser a pesquisa, o filtro por estado e a consulta de detalhes com dados fictícios. A aplicação mantém-se separada do portfolio.
 
 ## Decisões técnicas e implicações
 
@@ -50,7 +58,7 @@ A demonstração é documentada como não tendo autenticação. Assim, a existê
 
 O projecto utiliza dados fictícios, sem backend nem autenticação. Não há evidência de integração com agendas externas, envio de notificações ou utilização por uma clínica. Não são apresentados resultados de negócio, testes clínicos ou métricas de utilização.
 
-As duas capturas em português foram reutilizadas e comparadas com os ficheiros da aplicação independente. Não há comando de testes nem suite automatizada configurada nessa aplicação; não se atribuem os testes dos outros projectos a este caso. Não foi confirmado um URL público de demonstração ou repositório específico.
+As três capturas em português foram obtidas da versão local de produção da aplicação, com os exemplos fictícios incluídos no projecto. Não há comando de testes nem suite automatizada configurada nessa aplicação; não se atribuem os testes dos outros projectos a este caso. Não foi confirmado um URL público de demonstração ou repositório específico.
 
 ## Aprendizagens e próximos passos
 

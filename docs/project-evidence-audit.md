@@ -100,7 +100,7 @@ Capturas novas de browser, com previews locais, em 27/10/2026:
 - `public/images/projects/prisma-dashboard.jpg`: indicadores, filtros, séries, canais e campanhas sintéticas.
 - `public/images/projects/pauta-editor.jpg`: editor com conteúdo fictício de QA, aviso de modelos e estado manual.
 
-São capturas reais JPEG, optimizadas sem substituir elementos por imagens artificiais. As aplicações permanecem em português nas imagens; ambos os estudos explicam esse facto. Alt e legendas são traduzidos. Capturas Smart Clinic reutilizadas: `public/images/projects/smart-clinic-form.png` e `public/images/projects/smart-clinic-dashboard.png`.
+São capturas reais JPEG, optimizadas sem substituir elementos por imagens artificiais. As aplicações permanecem em português nas imagens; ambos os estudos explicam esse facto. Alt e legendas são traduzidos. As capturas Smart Clinic inicialmente reutilizadas foram entretanto substituídas por três capturas reais actuais: `public/images/projects/smart-clinic-form.jpg`, `public/images/projects/smart-clinic-dashboard.jpg` e `public/images/projects/smart-clinic-detail.jpg`. Ver `docs/smart-clinic-captures-verification.md` para a verificação desta actualização.
 
 Arquitectura partilhada: `src/content.config.ts`, `src/data/projects.ts`, `src/components/CaseStudy.astro`, `src/styles/case-study.css`, `src/layouts/BaseLayout.astro`, `src/components/SiteHeader.astro` e rotas dinâmicas PT/EN. translationKey associa slugs diferentes sem duplicar páginas ou componente. A homepage/listagem mostram os nomes reais dos projectos, descrições actualizadas e CTA para cada estudo; não há botão com destino público inexistente.
 

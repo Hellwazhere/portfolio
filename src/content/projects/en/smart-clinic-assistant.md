@@ -10,10 +10,18 @@ tags:
   - CSS
   - localStorage
 images:
-  - src: /images/projects/smart-clinic-form.png
-    alt: Screenshot of the Smart Clinic Assistant appointment request form.
-  - src: /images/projects/smart-clinic-dashboard.png
-    alt: Screenshot of the admin dashboard with totals, search, filters and appointment status controls.
+  - src: /images/projects/smart-clinic-form.jpg
+    width: 1265
+    height: 1432
+    alt: Complete appointment request form with contact details, service, availability and a local demonstration notice.
+  - src: /images/projects/smart-clinic-dashboard.jpg
+    width: 1265
+    height: 1359
+    alt: Dashboard with summary counts, search, a status filter and three fictional requests in different states.
+  - src: /images/projects/smart-clinic-detail.jpg
+    width: 1265
+    height: 712
+    alt: Details of Ana Demonstração's fictional request, including contact details, service, availability, status and an administrative message.
 ---
 
 ## Context and goal
@@ -30,7 +38,7 @@ In the captures, the first view prioritises form completion and explains where d
 
 ## Features confirmed in code
 
-The standalone application code has now been inspected: Astro components, TypeScript types, form/dashboard scripts and a storage module confirm the form, search, filters, details, statuses and `localStorage` persistence. The reused captures show:
+The standalone application code has been inspected: Astro components, TypeScript types, form/dashboard scripts and a storage module confirm the form, search, filters, details, statuses and `localStorage` persistence. The current local application captures show:
 
 - **Structured requests:** fields for name, email, phone, service, date, time and an optional administrative message, with an action to save the request.
 - **Overview:** counts for total, pending, confirmed and cancelled requests.
@@ -38,7 +46,7 @@ The standalone application code has now been inspected: Astro components, TypeSc
 - **Request actions:** controls to view details, change status and delete, plus a control to restore demonstration data.
 - **On-screen transparency:** notices identifying a fictional demo, explaining that nothing is sent to a clinic and asking people not to enter health information.
 
-The scripts implement request creation, counters, combined search/status filtering, a details dialog, status changes and confirmed deletion/reset. This review confirms implementation by reading code; it did not rerun those browser interactions. The application remains separate from the portfolio.
+The scripts implement request creation, counters, combined search/status filtering, a details dialog, status changes and confirmed deletion/reset. To update the captures, the application was run locally and search, status filtering and request details were checked in the browser using fictional data. The application remains separate from the portfolio.
 
 ## Technical decisions and implications
 
@@ -50,7 +58,7 @@ The demonstration is documented as having no authentication. An administrative d
 
 The project uses fictional data, with no backend or authentication. There is no evidence of external calendar integration, notification delivery or use by a clinic. No business results, clinical tests or usage metrics are claimed.
 
-Both Portuguese captures were reused and compared with the standalone application files. That application has no configured test command or automated suite; tests from other projects are not attributed to it. No public demo URL or project-specific repository has been confirmed.
+The three Portuguese captures were taken from the application's local production build, using the fictional examples included in the project. That application has no configured test command or automated suite; tests from other projects are not attributed to it. No public demo URL or project-specific repository has been confirmed.
 
 ## Learning and next steps
 
