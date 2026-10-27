@@ -10,6 +10,9 @@ const english = locale === 'en';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const projectsHref = `${base}${english ? 'en/' : ''}projects/`;
 const sections = headings.filter((heading) => heading.depth === 2);
+const captureIntro = title === 'Smart Clinic Assistant'
+  ? (english ? 'Real captures of the public demonstration in Portuguese, using fictional identities and preset messages. Open each image to inspect it at full size.' : 'Capturas reais da demonstração pública em português, com identidades fictícias e mensagens predefinidas. Abra cada imagem para a consultar no tamanho original.')
+  : (english ? 'Real captures of the local application in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da aplicação local em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.');
 ---
 <BaseLayout locale={locale} active="projects" alternateHref={alternateHref} title={`${title} · ${english ? 'Case study' : 'Estudo de caso'}`} description={description}>
   <article class="case-study">
@@ -40,7 +43,7 @@ const sections = headings.filter((heading) => heading.depth === 2);
         {images?.length && <section class="case-study-gallery" aria-labelledby="screenshots">
           <p class="eyebrow">{english ? 'Visual walkthrough' : 'Percurso visual'}</p>
           <h2 id="screenshots">{english ? 'Interface in context' : 'Interface em contexto'}</h2>
-          <p>{english ? 'Real captures of the local application in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da aplicação local em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.'}</p>
+          <p>{captureIntro}</p>
           {images.map((image, index) => <figure>
             <a href={`${base}${image.src.replace(/^\/+/, '')}`} target="_blank" rel="noopener noreferrer" aria-label={`${english ? 'Open image' : 'Abrir imagem'}: ${image.alt}`}>
               <img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />

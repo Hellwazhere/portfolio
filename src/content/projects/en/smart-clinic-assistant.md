@@ -1,11 +1,11 @@
 ---
 locale: en
-kind: Local demonstration
+kind: Public demonstration · Fictional data
 title: Smart Clinic Assistant
 caseStudy: true
 demoUrl: https://tiagoapsantos.github.io/smart-clinic-assistant/
 sourceUrl: https://github.com/tiagoapsantos/smart-clinic-assistant
-description: A fictional local appointment-management demo with a request form and admin dashboard for search, filtering, appointment details and status updates. It persists data in localStorage; there is no backend or authentication, and it uses no real patient data.
+description: A public fictional request-management demo with preset identities and messages, search, filters, details and statuses. Only simulation options persist in the browser; no freely entered contacts, backend or authentication.
 tags:
   - Astro
   - TypeScript
@@ -14,56 +14,60 @@ tags:
 images:
   - src: /images/projects/smart-clinic-form.jpg
     width: 1440
-    height: 1446
-    alt: Complete appointment request form with contact, service, date, time and administrative message fields, plus a fictional demonstration notice.
+    height: 1800
+    alt: "Public simulation form with a fictional-person selector, fixed contact details and message, service, date and time, plus a notice that no real booking is created."
   - src: /images/projects/smart-clinic-dashboard.jpg
     width: 1440
-    height: 1446
-    alt: Complete admin dashboard with four summary counts, search, a status filter and three fictional requests, pending, confirmed and cancelled.
+    height: 1800
+    alt: "Public demo dashboard with four fictional requests, summary counts, search, a status filter and controls for details, status changes and deletion."
   - src: /images/projects/smart-clinic-detail.jpg
     width: 1440
-    height: 1446
-    alt: Complete dialog for Ana Demonstração's fictional request over the dashboard, with example contact details, service, date, time, status and contact preference.
+    height: 1800
+    alt: "Complete details of Ana Demonstração's fictional request, with preset contact details and message, availability and status, over the dashboard."
 ---
 
 ## Context and goal
 
-Smart Clinic Assistant is a **fictional, local demonstration** of an appointment-request workflow. The exercise connects two digital operations tasks: collecting a structured request and making it easier to review in an administrative dashboard.
+Smart Clinic Assistant is a **public fictional demonstration**, available on GitHub Pages, of a request and administrative-management workflow. It is not intended for real bookings or real clinical or personal data. The exercise explores information organisation and interface clarity.
 
-It does not represent work for a clinic, a production booking service or a clinically validated product. Its focus is information organisation and interface clarity.
+It does not represent work for a clinic, a production booking service or a clinically validated product. The dashboard is public and has no access control.
 
 ## Problem and approach
 
-A request needs contact details, a service and preferred availability; an administrative view needs a way to find that request and recognise its status. The proposal separates these needs into two views: a **request form** and a **management dashboard**.
+The design separates simulating a request from reviewing it in the dashboard. Visitors choose one of three fictional identities; the name, email, phone number and administrative message are fixed, read-only examples. They can select a service and enter a date and time to explore the workflow, without freely entering contact details.
 
-In the captures, the first view prioritises form completion and explains where data stays. The second brings together totals, search, a status filter and a list of fictional requests. This separation makes the workflow visible without combining collection and management in one interface.
+The captures show the complete form, a dashboard with four fictional requests and Ana Demonstração's request details. The four requests include the three initial examples and an additional Rui Exemplo simulation; they do not represent four real people.
 
 ## Features confirmed in code
 
-The standalone application code has been inspected: Astro components, TypeScript types, form/dashboard scripts and a storage module confirm the form, search, filters, details, statuses and `localStorage` persistence. The current local application captures show:
+The standalone application's form, administrative scripts and storage were consulted and compared with the public interface. Real captures of the published version show:
 
-- **Structured requests:** fields for name, email, phone, service, date, time and an optional administrative message, with an action to save the request.
+- **Restricted simulation:** a fictional-person selector, read-only contacts and message, and service, date and time options. Saving does not create a real booking.
 - **Overview:** counts for total, pending, confirmed and cancelled requests.
-- **Administrative review:** a search field for contact details or services and a status selector.
-- **Request actions:** controls to view details, change status and delete, plus a control to restore demonstration data.
-- **On-screen transparency:** notices identifying a fictional demo, explaining that nothing is sent to a clinic and asking people not to enter health information.
+- **Administrative review:** search by fictional contact or service, combined with a status filter.
+- **Request management:** details, status changes and deletion; restoration of the three fictional examples, with confirmation for destructive operations.
+- **Transparency:** demonstration notices, no delivery to a clinic and instructions against using real data.
 
-The scripts implement request creation, counters, combined search/status filtering, a details dialog, status changes and confirmed deletion/reset. To update the captures, the application was run locally and search, status filtering and request details were checked in the browser using fictional data. The application remains separate from the portfolio.
+Creating fictional requests, search, filters, details and status changes persisting after reload were checked in the public demonstration during publication. The application remains independent of the Portfolio.
 
 ## Technical decisions and implications
 
-Configuration and source code confirm **Astro, TypeScript, CSS and localStorage**. Browser persistence supports exploration of the described local workflow without a backend. However, it is neither secure storage nor a shared system for multiple people or devices.
+The application uses **Astro, TypeScript, CSS and localStorage**. Its static build runs under /smart-clinic-assistant/, without an application server, backend or authentication. There are no calendar integrations, notifications or request submissions to a clinic.
 
-The demonstration is documented as having no authentication. An administrative dashboard should therefore not be mistaken for access control. The form uses HTML validation, an additional email check and a minimum date based on the local day. Storage reads validate fields, dates, times and known statuses. If a valid JSON array has an invalid structure, the code restores fictional examples; read failures return in-memory examples. There is no versioned backup or recovery of original data.
+Submission constructs the identity and message from the known scenario, ignoring the contact values displayed in the form. Storage validates canonical examples, allowed services and statuses, dates, times and identifiers, with a limit of 50 requests. The document security policy blocks data connections and form submissions.
+
+The v2 demo key stores only an identifier, scenario reference, service, date, time, status and timestamp. Contacts and messages are reconstructed from the examples. The old v1 key, which accepted free text, is not read, migrated or automatically deleted. Any data previously entered in an older version needs manual removal in the corresponding origin and browser profile.
 
 ## Limitations and scope
 
-The project uses fictional data, with no backend or authentication. There is no evidence of external calendar integration, notification delivery or use by a clinic. No business results, clinical tests or usage metrics are claimed.
+localStorage is not secure, encrypted or synchronised storage. Subpaths on the same domain share an origin; a dedicated key prevents accidental mixing but is not a security boundary. The fictional mode reduces accidental entry of real data without preventing manual changes through developer tools. The dashboard is unsuitable for real patient information.
 
-The three Portuguese captures were taken from the application's local production build, using the fictional examples included in the project. That application has no configured test command or automated suite; tests from other projects are not attributed to it.
+The application has **12 essential tests that passed** during preparation/publication: preset scenarios, rejection of arbitrary data, validation, persistence, limits, isolation of the old key, static resources and delete/reset operations. Four tests execute the real handlers with simulated accept/cancel responses, checking data, counts and feedback. This is not a comprehensive audit or native-dialog testing across every browser.
+
+The three captures were taken directly from the public Portuguese demonstration, using fictional identities and contacts at the same resolution and scale. No clinical use, clinical tests or business results are claimed.
 
 ## Learning and next steps
 
-The exercise offers a way to examine the transition from a form to an operations view, the relationship between statuses and counters, and the importance of explaining local storage limitations. The captures also show how notices and fictional examples can be part of the visual journey itself.
+The project demonstrates the transition from a simulated form to an operations view, consistency between statuses and counts, and the importance of restricting the data accepted by a public demonstration.
 
-A useful next step is to add automated tests and rerun the complete journey: saving, searching, reviewing and updating a fictional request, including keyboard navigation and error conditions. These tests are a recommendation, not results already obtained.
+Possible next steps include broader browser, keyboard, screen-reader and error-state coverage. A real system would require its own security and privacy requirements; this demonstration's static hosting and local storage do not meet that purpose.

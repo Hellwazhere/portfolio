@@ -1,11 +1,11 @@
 ---
 locale: pt
-kind: Demonstração local
+kind: Demonstração pública · Dados fictícios
 title: Smart Clinic Assistant
 caseStudy: true
 demoUrl: https://tiagoapsantos.github.io/smart-clinic-assistant/
 sourceUrl: https://github.com/tiagoapsantos/smart-clinic-assistant
-description: Demonstração fictícia de gestão local de marcações, com formulário de pedido e painel administrativo para pesquisa, filtros, consulta de detalhes e actualização de estados. Guarda os dados no localStorage; não tem backend nem autenticação e não utiliza dados reais de pacientes.
+description: Demonstração pública e fictícia de gestão de pedidos, com identidades e mensagens predefinidas, pesquisa, filtros, detalhes e estados. Guarda apenas opções de simulação no navegador; sem contactos livres, backend ou autenticação.
 tags:
   - Astro
   - TypeScript
@@ -14,56 +14,60 @@ tags:
 images:
   - src: /images/projects/smart-clinic-form.jpg
     width: 1440
-    height: 1446
-    alt: Formulário completo de pedido de marcação, com campos de contacto, serviço, data, hora e mensagem administrativa, e aviso de demonstração fictícia.
+    height: 1800
+    alt: "Formulário público de simulação com selector de pessoa fictícia, contactos e mensagem fixos, serviço, data e hora, e aviso de que não cria marcações reais."
   - src: /images/projects/smart-clinic-dashboard.jpg
     width: 1440
-    height: 1446
-    alt: Dashboard administrativo completo, com quatro contadores, pesquisa, filtro por estado e três pedidos fictícios, pendente, confirmado e cancelado.
+    height: 1800
+    alt: "Dashboard da demonstração pública com quatro pedidos fictícios, contadores, pesquisa, filtro de estado e controlos de detalhe, alteração e remoção."
   - src: /images/projects/smart-clinic-detail.jpg
     width: 1440
-    height: 1446
-    alt: Diálogo completo do pedido fictício de Ana Demonstração sobre o dashboard, com contacto de exemplo, serviço, data, hora, estado e preferência de contacto.
+    height: 1800
+    alt: "Detalhe completo do pedido fictício de Ana Demonstração, com contacto e mensagem predefinidos, disponibilidade e estado, sobre o dashboard."
 ---
 
 ## Contexto e objectivo
 
-O Smart Clinic Assistant é uma **demonstração local e fictícia** de um fluxo de pedidos de marcação. O exercício aproxima duas tarefas de operações digitais: recolher um pedido de forma estruturada e facilitar a sua consulta num painel administrativo.
+O Smart Clinic Assistant é uma **demonstração pública e fictícia**, disponível no GitHub Pages, de um fluxo de pedidos e gestão administrativa. Não se destina a marcações reais nem a dados clínicos ou pessoais reais. O exercício permite explorar a organização da informação e a clareza da interface.
 
-Não representa trabalho para uma clínica, um serviço de marcações em produção ou um produto clínico validado. O seu interesse está na organização da informação e na clareza da interface.
+Não representa trabalho para uma clínica, um serviço de marcações em produção ou um produto clínico validado. O dashboard é público e não tem controlo de acesso.
 
 ## Problema e abordagem
 
-Um pedido precisa de reunir contacto, serviço pretendido e disponibilidade; a consulta administrativa precisa de permitir encontrar esse pedido e reconhecer o seu estado. A proposta separa estas necessidades em duas vistas: **formulário de pedido** e **painel de gestão**.
+A proposta separa a simulação de um pedido da sua consulta no painel. O visitante escolhe uma das três identidades fictícias; nome, email, telefone e mensagem administrativa são exemplos fixos, não editáveis. Pode seleccionar o serviço e indicar data e hora para explorar o fluxo, sem introduzir contactos livres.
 
-Nas capturas, a primeira vista dá prioridade ao preenchimento e explica onde ficam os dados. A segunda reúne totais, pesquisa, filtro por estado e uma lista de pedidos fictícios. Esta separação torna o percurso visível sem misturar recolha e gestão na mesma interface.
+As capturas mostram o formulário completo, o dashboard com quatro pedidos fictícios e o detalhe de Ana Demonstração. Os quatro pedidos incluem os três exemplos iniciais e uma simulação adicional de Rui Exemplo; não representam quatro pessoas reais.
 
 ## Funcionalidades confirmadas no código
 
-O código da aplicação independente foi inspeccionado: componentes Astro, tipos TypeScript, scripts do formulário e painel e módulo de armazenamento confirmam o formulário, pesquisa, filtros, detalhes, estados e persistência em `localStorage`. As capturas actuais da aplicação local mostram:
+O formulário, os scripts administrativos e o armazenamento da aplicação independente foram consultados e comparados com a interface pública. As capturas reais da versão publicada mostram:
 
-- **Pedido estruturado:** campos para nome, email, telefone, serviço, data, hora e mensagem administrativa opcional, com uma acção para guardar o pedido.
+- **Simulação restrita:** selector de pessoa fictícia, contactos e mensagem de leitura e opções de serviço, data e hora. Guardar não cria uma marcação real.
 - **Visão de conjunto:** contadores de pedidos totais, pendentes, confirmados e cancelados.
-- **Consulta administrativa:** campo de pesquisa por contacto ou serviço e selector de estado.
-- **Acções por pedido:** controlos para ver detalhes, alterar o estado e apagar; existe também um controlo para repor dados de demonstração.
-- **Transparência no ecrã:** avisos de demonstração fictícia, ausência de envio para uma clínica e instruções para não introduzir informação de saúde.
+- **Consulta administrativa:** pesquisa por contacto fictício ou serviço, combinada com filtro de estado.
+- **Gestão por pedido:** detalhe, alteração de estado e remoção; reposição dos três exemplos fictícios, com confirmação nas operações destrutivas.
+- **Transparência:** avisos de demonstração, ausência de envio para uma clínica e proibição de dados reais.
 
-Os scripts implementam a criação de pedidos, contadores, pesquisa combinada com estado, diálogo de detalhes, alteração de estado e remoção/reposição com confirmação. Para actualizar as capturas, a aplicação foi executada localmente e foram verificados no browser a pesquisa, o filtro por estado e a consulta de detalhes com dados fictícios. A aplicação mantém-se separada do portfolio.
+A criação de pedidos fictícios, a pesquisa, os filtros, o detalhe e a alteração de estado com persistência após recarregamento foram verificados na demonstração pública durante a publicação. A aplicação mantém-se independente do Portfolio.
 
 ## Decisões técnicas e implicações
 
-A configuração e o código confirmam **Astro, TypeScript, CSS e localStorage**. A persistência no navegador permite explorar o fluxo local descrito sem backend. Em contrapartida, não constitui armazenamento seguro nem um sistema partilhado entre pessoas ou dispositivos.
+A aplicação usa **Astro, TypeScript, CSS e localStorage**. O build estático funciona sob /smart-clinic-assistant/, sem servidor de aplicação, backend ou autenticação. Não existem integrações de agendas, envio de notificações ou submissão dos pedidos a uma clínica.
 
-A demonstração é documentada como não tendo autenticação. Assim, a existência de um painel administrativo não deve ser confundida com controlo de acesso. O formulário usa validação HTML, verificação adicional de email e data mínima no dia local. A leitura do armazenamento verifica campos, datas, horas e estados conhecidos. Se uma lista JSON válida tiver estrutura inválida, o código repõe exemplos fictícios; erros de leitura devolvem exemplos em memória. Não há backup versionado ou recuperação dos dados originais.
+A submissão constrói a identidade e a mensagem a partir do cenário conhecido, ignorando os contactos apresentados no formulário. A gravação valida os exemplos canónicos, as listas de serviço e estado, datas, horas e identificadores, com limite de 50 pedidos. A política de segurança dos documentos bloqueia ligações de dados e submissões de formulários.
+
+A chave de demonstração v2 guarda apenas identificador, referência ao cenário, serviço, data, hora, estado e timestamp. Os contactos e mensagens são reconstruídos a partir dos exemplos. A chave antiga v1, que aceitava texto livre, não é lida, migrada ou apagada automaticamente. Dados antigos eventualmente introduzidos numa versão anterior exigem remoção manual na origem e perfil correspondentes.
 
 ## Limitações e alcance
 
-O projecto utiliza dados fictícios, sem backend nem autenticação. Não há evidência de integração com agendas externas, envio de notificações ou utilização por uma clínica. Não são apresentados resultados de negócio, testes clínicos ou métricas de utilização.
+localStorage não é armazenamento seguro, encriptado ou sincronizado. As subpastas do mesmo domínio partilham a origem; a chave própria evita mistura acidental, mas não constitui uma fronteira de segurança. O modo fictício reduz a introdução acidental de dados reais, sem impedir alterações manuais nas ferramentas de desenvolvimento. O painel não é adequado a informação real de pacientes.
 
-As três capturas em português foram obtidas da versão local de produção da aplicação, com os exemplos fictícios incluídos no projecto. Não há comando de testes nem suite automatizada configurada nessa aplicação; não se atribuem os testes dos outros projectos a este caso.
+A aplicação possui **12 testes essenciais aprovados** na preparação/publicação: cenários predefinidos, rejeição de dados arbitrários, validação, persistência, limites, isolamento da chave antiga, recursos estáticos e operações de apagar/repor. Quatro testes executam os handlers reais com aceitar/cancelar simulados, verificando dados, contadores e feedback. Isto não equivale a uma auditoria integral ou a testes nativos em todos os browsers.
+
+As três capturas foram recolhidas directamente da demonstração pública em português, com identidades e contactos fictícios, à mesma resolução e escala. Não se reivindicam utilização por uma clínica, testes clínicos ou resultados de negócio.
 
 ## Aprendizagens e próximos passos
 
-O exercício permite analisar a passagem de um formulário para uma vista de operações, a relação entre estados e contadores e a importância de explicar as limitações do armazenamento local. As capturas mostram também como os avisos e os exemplos fictícios podem fazer parte do próprio percurso visual.
+O projecto demonstra a passagem de uma simulação de formulário para uma vista de operações, a coerência entre estados e contadores e a importância de limitar os dados aceites por uma demonstração pública.
 
-Um próximo passo é acrescentar testes automatizados e voltar a verificar o percurso completo: guardar, procurar, consultar e actualizar um pedido fictício, incluindo navegação por teclado e situações de erro. Estes testes são uma recomendação, não resultados já obtidos.
+Próximos passos possíveis são ampliar a cobertura de browser, teclado, leitores de ecrã e situações de erro. Um eventual sistema real exigiria requisitos próprios de segurança e privacidade; o alojamento estático e o armazenamento local desta demonstração não satisfazem esse objectivo.
