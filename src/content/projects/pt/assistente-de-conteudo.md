@@ -4,6 +4,8 @@ kind: Projecto pessoal · Demonstração funcional
 title: Pauta — Content Assistant
 caseStudy: true
 translationKey: content-assistant
+demoUrl: https://tiagoapsantos.github.io/content-assistant/
+sourceUrl: https://github.com/tiagoapsantos/content-assistant
 description: Ferramenta editorial local com briefing, modelos determinísticos, editor, biblioteca e planeamento. Persistência no navegador e backups validados, sem IA generativa ou publicação automática.
 tags:
   - JavaScript
