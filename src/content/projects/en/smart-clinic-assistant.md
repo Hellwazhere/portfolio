@@ -48,7 +48,7 @@ The standalone application's form, administrative scripts and storage were consu
 - **Request management:** details, status changes and deletion; restoration of the three fictional examples, with confirmation for destructive operations.
 - **Transparency:** demonstration notices, no delivery to a clinic and instructions against using real data.
 
-Creating fictional requests, search, filters, details and status changes persisting after reload were checked in the public demonstration during publication. The application remains independent of the Portfolio.
+Creating fictional requests, search, filters, details and status changes persisting after reload were checked in the public demonstration. The application remains independent of the Portfolio.
 
 ## Technical decisions and implications
 
@@ -62,7 +62,7 @@ The v2 demo key stores only an identifier, scenario reference, service, date, ti
 
 localStorage is not secure, encrypted or synchronised storage. Subpaths on the same domain share an origin; a dedicated key prevents accidental mixing but is not a security boundary. The fictional mode reduces accidental entry of real data without preventing manual changes through developer tools. The dashboard is unsuitable for real patient information.
 
-The application has **12 essential tests that passed** during preparation/publication: preset scenarios, rejection of arbitrary data, validation, persistence, limits, isolation of the old key, static resources and delete/reset operations. Four tests execute the real handlers with simulated accept/cancel responses, checking data, counts and feedback. This is not a comprehensive audit or native-dialog testing across every browser.
+The application has **12 essential automated tests that passed**: preset scenarios, rejection of arbitrary data, validation, persistence, limits, isolation of the old key, static resources and delete/reset operations. Four tests execute the real handlers with simulated accept/cancel responses, checking data, counts and feedback. This is not a comprehensive audit or native-dialog testing across every browser.
 
 The three captures were taken directly from the public Portuguese demonstration, using fictional identities and contacts at the same resolution and scale. No clinical use, clinical tests or business results are claimed.
 

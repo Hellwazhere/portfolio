@@ -21,7 +21,7 @@ images:
 
 Pauta is a personal editorial-productivity application for small businesses, marketing professionals and content creators. It addresses the journey from an initial idea to a reviewed draft organised by publication date.
 
-The first version runs entirely in the browser. Assistance comes from **deterministic rules and templates**, not generative AI. AI-assisted development must not be confused with an AI integration in the delivered application.
+The application runs entirely in the browser. Assistance comes from **deterministic rules and templates**, not generative AI. AI-assisted development must not be confused with an AI integration in the delivered application.
 
 ## Editorial workflow
 
@@ -45,18 +45,18 @@ A versioned `localStorage` repository preserves the library, brief and work-in-p
 
 ## Tests and validation
 
-**24 tests passed when rerun during the integration on 27 October 2026.** They cover briefs, input influence, determinism, creation/updates, copies, statuses, search, dates, exports, imports, corruption, quota and conflicts using an in-memory storage adapter.
+**24 automated tests passed.** They cover briefs, input influence, determinism, creation/updates, copies, statuses, search, dates, exports, imports, corruption, quota and conflicts using an in-memory storage adapter.
 
-Earlier records document the complete browser journey, actual downloads, deletion confirmation and JSON restoration. The current capture shows the local editor with fictional content. In-memory storage tests do not mean every failure has been induced in a real browser.
+Verification records document the complete browser journey, actual downloads, deletion confirmation and JSON restoration. The capture shows the local editor with fictional content. In-memory storage tests do not mean every failure has been induced in a real browser.
 
 ## Limitations and availability
 
 `localStorage` is not secure storage for sensitive data and does not sync devices. Technical limits include 200 items and a 2 MB backup; actual browser quota may be lower. The interface is PT-PT, with no user or screen-reader validation performed.
 
-There are no external API integrations, backend, generative AI, publishing, notifications or external calendar. No public demo or project-specific repository has been confirmed to link here.
+There are no external API integrations, backend, generative AI, publishing, notifications or external calendar. The live demo and source code are available through the links at the start of this case study.
 
 ## Learning and next steps
 
 The central decision was to separate editorial assistance from language generation: organising information is useful without promising automatic creativity. Distinguishing work in progress, saved library items and backups avoids false persistence guarantees.
 
-Future AI integration would require a secure backend, server-side credentials, informed consent to send content, cost controls and explicit labelling of generated responses. That architecture is documented only; nothing has been configured. English translation, screen-reader testing and revision history are other possible developments.
+AI integration would require a secure backend, server-side credentials, informed consent to send content, cost controls and explicit labelling of generated responses. That architecture is documented only; nothing has been configured. English translation, screen-reader testing and revision history are other possible developments.

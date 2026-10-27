@@ -46,9 +46,9 @@ Native Node.js tools generate static files and serve the preview. There are no n
 
 ## Tests and validation
 
-The existing suite was rerun during the integration on 27 October 2026: **12 tests passed**. It covers validation, boundaries, normalisation, the summary, routes, assets, anchors, accessible structure and local-server behaviour.
+**12 automated tests passed.** The suite covers validation, boundaries, normalisation, the summary, routes, assets, anchors, accessible structure and local-server behaviour.
 
-The application's verification record also documents form/download checks, keyboard use and four viewport widths. The capture on this page was taken from the current local preview. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
+The application's verification record also documents form/download checks, keyboard use and four viewport widths. The capture on this page was taken from the local preview. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
 
 ## Limitations and availability
 
@@ -58,4 +58,4 @@ There is no email delivery, backend, ordering, quoting or persistent storage. Th
 
 The central decision was to align the interface promise with the system's actual capability: a local file is demonstrable functionality; an unsupported “message sent” confirmation would not be. Separating content, rendering and validation makes that journey easier to test.
 
-English translation and screen-reader checks are possible next steps. A backend would require real delivery, privacy and server-validation requirements; it is not part of the current implementation.
+English translation and screen-reader checks are possible next steps. A backend would require real delivery, privacy and server-validation requirements; it is not part of the implementation.

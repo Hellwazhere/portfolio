@@ -50,7 +50,7 @@ Filters can be combined, with date shortcuts and a reset option. Invalid dates p
 
 Data, calculations, formatting, charts, presentation and export are separate modules. Analytical functions do not depend on the DOM. HTML, CSS and JavaScript modules are served by native Node.js tools, without npm dependencies or a charting library.
 
-**19 tests passed when rerun during the integration on 27 October 2026.** They cover formulas, weighted aggregation, data integrity, filters, cross-view consistency, sorting, zero denominators, CSV and the server. Earlier verification records document browser interactions, a real download and responsive checks; the current capture was taken from the local preview.
+**19 automated tests passed.** They cover formulas, weighted aggregation, data integrity, filters, cross-view consistency, sorting, zero denominators, CSV and the server. Verification records document browser interactions, a real download and responsive checks; the capture was taken from the local preview.
 
 ## Limitations
 

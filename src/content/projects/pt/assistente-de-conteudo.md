@@ -21,7 +21,7 @@ images:
 
 O Pauta é uma aplicação pessoal de produtividade editorial para pequenos negócios, profissionais de marketing e criadores de conteúdo. Aborda o percurso entre uma ideia inicial, um rascunho revisto e uma publicação organizada por data.
 
-A primeira versão funciona inteiramente no navegador. A assistência é feita por **regras e modelos determinísticos**, não por IA generativa. O desenvolvimento com assistência de IA não deve ser confundido com uma integração de IA na aplicação entregue.
+A aplicação funciona inteiramente no navegador. A assistência é feita por **regras e modelos determinísticos**, não por IA generativa. O desenvolvimento com assistência de IA não deve ser confundido com uma integração de IA na aplicação entregue.
 
 ## Abordagem ao fluxo editorial
 
@@ -39,24 +39,24 @@ As exportações incluem cópia, TXT individual, CSV e backup JSON. O TXT omite 
 
 ## Arquitectura e persistência
 
-Configuração/modelos de dados, validação, motor de sugestões, gestão, armazenamento, exportação e componentes de interface são módulos separados. O fornecedor local tem um contrato isolado para permitir uma futura substituição sem reescrever a biblioteca ou o editor. HTML, CSS e JavaScript usam apenas ferramentas nativas do Node.js, sem dependências npm.
+Configuração/modelos de dados, validação, motor de sugestões, gestão, armazenamento, exportação e componentes de interface são módulos separados. O fornecedor local tem um contrato isolado para permitir uma substituição sem reescrever a biblioteca ou o editor. HTML, CSS e JavaScript usam apenas ferramentas nativas do Node.js, sem dependências npm.
 
 Um repositório versionado em `localStorage` preserva a biblioteca, o briefing e o editor em curso. Guardar trabalho em curso não equivale a adicioná-lo à biblioteca. Há cópia anterior, tratamento de corrupção/quota e protecção contra sobrescrita silenciosa por outra janela. Datas de planeamento são strings de calendário, sem conversões indevidas para UTC.
 
 ## Testes e validação
 
-**24 testes foram reexecutados e aprovados na integração de 27 de Outubro de 2026.** Cobrem briefing, influência dos campos, determinismo, criação/actualização, cópias, estados, pesquisa, datas, exportação, importação, corrupção, quota e conflitos através de um adaptador de armazenamento em memória.
+**24 testes automatizados aprovados.** Cobrem briefing, influência dos campos, determinismo, criação/actualização, cópias, estados, pesquisa, datas, exportação, importação, corrupção, quota e conflitos através de um adaptador de armazenamento em memória.
 
-Os registos anteriores documentam o fluxo completo no browser, downloads reais, confirmação de remoção e restauração JSON. A captura actual mostra o editor no preview local com conteúdo fictício. Testes de armazenamento em memória não equivalem a provocar todas as falhas num browser real.
+Os registos de verificação documentam o fluxo completo no browser, downloads reais, confirmação de remoção e restauração JSON. A captura mostra o editor no preview local com conteúdo fictício. Testes de armazenamento em memória não equivalem a provocar todas as falhas num browser real.
 
 ## Limitações e disponibilidade
 
-`localStorage` não é armazenamento seguro para dados sensíveis, nem sincroniza dispositivos. A versão tem limites técnicos de 200 conteúdos e backup de 2 MB; a quota real do navegador pode ser inferior. A interface é PT-PT e não houve validação com utilizadores ou leitores de ecrã.
+`localStorage` não é armazenamento seguro para dados sensíveis, nem sincroniza dispositivos. A aplicação tem limites técnicos de 200 conteúdos e backup de 2 MB; a quota real do navegador pode ser inferior. A interface é PT-PT e não houve validação com utilizadores ou leitores de ecrã.
 
-Não há integrações com APIs externas, backend, IA generativa, publicação, notificações ou calendário externo. Não existe demonstração pública ou repositório específico confirmado para ligar aqui.
+Não há integrações com APIs externas, backend, IA generativa, publicação, notificações ou calendário externo. A demonstração pública e o código estão disponíveis nos links no início deste estudo.
 
 ## Aprendizagens e próximos passos
 
 A decisão central foi separar assistência editorial de geração de linguagem: organizar informação é útil sem prometer criatividade automática. A distinção entre editor em curso, biblioteca guardada e backup evita falsas garantias de persistência.
 
-Uma futura integração de IA exigiria backend seguro, credenciais no servidor, consentimento para envio de conteúdo, controlo de custos e identificação das respostas geradas. Essa arquitectura está apenas documentada; não foi configurada. Tradução EN, leitores de ecrã e histórico de revisões são outras evoluções possíveis.
+Uma integração de IA exigiria backend seguro, credenciais no servidor, consentimento para envio de conteúdo, controlo de custos e identificação das respostas geradas. Essa arquitectura está apenas documentada; não foi configurada. Tradução EN, leitores de ecrã e histórico de revisões são outras evoluções possíveis.

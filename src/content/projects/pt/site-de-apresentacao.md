@@ -46,9 +46,9 @@ O Node.js nativo gera os ficheiros estáticos e serve o preview. Não há depend
 
 ## Testes e validação
 
-Na integração de 27 de Outubro de 2026, a suite existente foi reexecutada: **12 testes aprovados**. Cobre validação, limites, normalização, resumo, rotas, recursos, âncoras, estrutura acessível e comportamento do servidor local.
+**12 testes automatizados aprovados.** A suite cobre validação, limites, normalização, resumo, rotas, recursos, âncoras, estrutura acessível e comportamento do servidor local.
 
-Os registos de verificação da aplicação documentam ainda ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. A captura desta página foi obtida nessa data no preview local. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
+Os registos de verificação da aplicação documentam ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. A captura desta página foi obtida no preview local. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
 
 ## Limitações e disponibilidade
 
@@ -58,4 +58,4 @@ Não há envio de email, backend, encomendas, orçamento ou armazenamento persis
 
 A decisão mais importante foi alinhar a promessa da interface com a capacidade real do sistema: um ficheiro local é uma função demonstrável; uma mensagem de “envio concluído” sem envio não seria. A separação entre conteúdo, renderização e validação torna esse percurso mais fácil de testar.
 
-Tradução inglesa e ensaios com leitores de ecrã são evoluções possíveis. Um backend exigiria requisitos reais de entrega, privacidade e validação no servidor; não faz parte da implementação actual.
+Tradução inglesa e ensaios com leitores de ecrã são evoluções possíveis. Um backend exigiria requisitos reais de entrega, privacidade e validação no servidor; não faz parte da implementação.

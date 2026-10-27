@@ -50,7 +50,7 @@ Os filtros combinam-se, têm atalhos e reposição. Datas inválidas impedem apr
 
 Dados, cálculos, formatação, gráficos, apresentação e exportação são módulos distintos. As funções analíticas não dependem do DOM. HTML, CSS e JavaScript modular são servidos por ferramentas nativas do Node.js, sem dependências npm ou biblioteca de gráficos.
 
-**19 testes foram reexecutados e aprovados na integração de 27 de Outubro de 2026.** Incluem fórmulas, agregação ponderada, integridade dos dados, filtros, coerência entre vistas, ordenação, denominadores zero, CSV e servidor. Os registos anteriores documentam interacções no browser, download real e responsividade; a captura actual foi recolhida no preview local.
+**19 testes automatizados aprovados.** Incluem fórmulas, agregação ponderada, integridade dos dados, filtros, coerência entre vistas, ordenação, denominadores zero, CSV e servidor. Os registos de verificação documentam interacções no browser, download real e responsividade; a captura foi recolhida no preview local.
 
 ## Limitações
 
@@ -62,4 +62,4 @@ Não há importação, edição ou persistência de dados, backend, sincronizaç
 
 A competência central demonstrada é manter a coerência entre métricas, filtros e visualizações, tornando as definições verificáveis. Separar ausência de dados, actividade zero e indicador não calculável evita conclusões visuais enganadoras.
 
-Importação validada, comparação entre períodos e tradução EN são evoluções possíveis, ainda não implementadas. Qualquer fonte real exigiria validar o schema e esclarecer a atribuição antes de reutilizar os cálculos.
+Importação validada, comparação entre períodos e tradução EN são evoluções possíveis, não implementadas. Qualquer fonte real exigiria validar o schema e esclarecer a atribuição antes de reutilizar os cálculos.

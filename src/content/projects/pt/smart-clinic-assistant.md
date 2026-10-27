@@ -48,7 +48,7 @@ O formulário, os scripts administrativos e o armazenamento da aplicação indep
 - **Gestão por pedido:** detalhe, alteração de estado e remoção; reposição dos três exemplos fictícios, com confirmação nas operações destrutivas.
 - **Transparência:** avisos de demonstração, ausência de envio para uma clínica e proibição de dados reais.
 
-A criação de pedidos fictícios, a pesquisa, os filtros, o detalhe e a alteração de estado com persistência após recarregamento foram verificados na demonstração pública durante a publicação. A aplicação mantém-se independente do Portfolio.
+A criação de pedidos fictícios, a pesquisa, os filtros, o detalhe e a alteração de estado com persistência após recarregamento foram verificados na demonstração pública. A aplicação mantém-se independente do Portfolio.
 
 ## Decisões técnicas e implicações
 
@@ -62,7 +62,7 @@ A chave de demonstração v2 guarda apenas identificador, referência ao cenári
 
 localStorage não é armazenamento seguro, encriptado ou sincronizado. As subpastas do mesmo domínio partilham a origem; a chave própria evita mistura acidental, mas não constitui uma fronteira de segurança. O modo fictício reduz a introdução acidental de dados reais, sem impedir alterações manuais nas ferramentas de desenvolvimento. O painel não é adequado a informação real de pacientes.
 
-A aplicação possui **12 testes essenciais aprovados** na preparação/publicação: cenários predefinidos, rejeição de dados arbitrários, validação, persistência, limites, isolamento da chave antiga, recursos estáticos e operações de apagar/repor. Quatro testes executam os handlers reais com aceitar/cancelar simulados, verificando dados, contadores e feedback. Isto não equivale a uma auditoria integral ou a testes nativos em todos os browsers.
+A aplicação possui **12 testes automatizados essenciais aprovados**: cenários predefinidos, rejeição de dados arbitrários, validação, persistência, limites, isolamento da chave antiga, recursos estáticos e operações de apagar/repor. Quatro testes executam os handlers reais com aceitar/cancelar simulados, verificando dados, contadores e feedback. Isto não equivale a uma auditoria integral ou a testes nativos em todos os browsers.
 
 As três capturas foram recolhidas directamente da demonstração pública em português, com identidades e contactos fictícios, à mesma resolução e escala. Não se reivindicam utilização por uma clínica, testes clínicos ou resultados de negócio.
 
