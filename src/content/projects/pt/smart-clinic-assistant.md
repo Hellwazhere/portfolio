@@ -11,17 +11,17 @@ tags:
   - localStorage
 images:
   - src: /images/projects/smart-clinic-form.jpg
-    width: 1265
-    height: 1432
-    alt: Formulário completo de pedido de marcação, com contacto, serviço, disponibilidade e aviso de demonstração local.
+    width: 1440
+    height: 1446
+    alt: Formulário completo de pedido de marcação, com campos de contacto, serviço, data, hora e mensagem administrativa, e aviso de demonstração fictícia.
   - src: /images/projects/smart-clinic-dashboard.jpg
-    width: 1265
-    height: 1359
-    alt: Painel com contadores, pesquisa, filtro por estado e três pedidos fictícios em estados distintos.
+    width: 1440
+    height: 1446
+    alt: Dashboard administrativo completo, com quatro contadores, pesquisa, filtro por estado e três pedidos fictícios, pendente, confirmado e cancelado.
   - src: /images/projects/smart-clinic-detail.jpg
-    width: 1265
-    height: 712
-    alt: Detalhe do pedido fictício de Ana Demonstração, com contacto, serviço, disponibilidade, estado e mensagem administrativa.
+    width: 1440
+    height: 1446
+    alt: Diálogo completo do pedido fictício de Ana Demonstração sobre o dashboard, com contacto de exemplo, serviço, data, hora, estado e preferência de contacto.
 ---
 
 ## Contexto e objectivo

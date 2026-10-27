@@ -11,17 +11,17 @@ tags:
   - localStorage
 images:
   - src: /images/projects/smart-clinic-form.jpg
-    width: 1265
-    height: 1432
-    alt: Complete appointment request form with contact details, service, availability and a local demonstration notice.
+    width: 1440
+    height: 1446
+    alt: Complete appointment request form with contact, service, date, time and administrative message fields, plus a fictional demonstration notice.
   - src: /images/projects/smart-clinic-dashboard.jpg
-    width: 1265
-    height: 1359
-    alt: Dashboard with summary counts, search, a status filter and three fictional requests in different states.
+    width: 1440
+    height: 1446
+    alt: Complete admin dashboard with four summary counts, search, a status filter and three fictional requests, pending, confirmed and cancelled.
   - src: /images/projects/smart-clinic-detail.jpg
-    width: 1265
-    height: 712
-    alt: Details of Ana Demonstração's fictional request, including contact details, service, availability, status and an administrative message.
+    width: 1440
+    height: 1446
+    alt: Complete dialog for Ana Demonstração's fictional request over the dashboard, with example contact details, service, date, time, status and contact preference.
 ---
 
 ## Context and goal
