@@ -26,6 +26,9 @@
 .case-study-gallery figure { margin: 32px 0; }
 .case-study-gallery figure a { display: block; border: 1px solid var(--line); background: var(--surface); }
 .case-study-gallery img { display: block; width: 100%; height: auto; }
+.case-study-gallery .screenshot-viewport { aspect-ratio: 3 / 2; overflow: auto; scrollbar-gutter: stable; overscroll-behavior: contain; border: 1px solid var(--line); background: var(--surface); }
+.case-study-gallery .screenshot-viewport > a { border: 0; }
+.case-study-gallery .screenshot-viewport:focus-visible { outline: 3px solid var(--accent-strong); outline-offset: 4px; }
 .case-study-gallery figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; }
 .case-study-gallery figcaption .project-index { margin-right: 8px; }
 .case-study-footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 30px 64px; border-top: 1px solid var(--line); }

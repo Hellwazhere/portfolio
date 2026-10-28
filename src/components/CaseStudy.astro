@@ -7,6 +7,7 @@ const { project, alternateHref } = Astro.props;
 const { Content, headings } = await render(project);
 const { locale, title, description, kind, tags, images, demoUrl, sourceUrl } = project.data;
 const english = locale === 'en';
+const uniformScreenshots = ['marketing-dashboard', 'content-assistant'].includes(project.data.translationKey ?? '');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const projectsHref = `${base}${english ? 'en/' : ''}projects/`;
 const sections = headings.filter((heading) => heading.depth === 2);
@@ -44,10 +45,13 @@ const captureIntro = title === 'Smart Clinic Assistant'
           <p class="eyebrow">{english ? 'Visual walkthrough' : 'Percurso visual'}</p>
           <h2 id="screenshots">{english ? 'Interface in context' : 'Interface em contexto'}</h2>
           <p>{captureIntro}</p>
+          {uniformScreenshots && <p>{english ? 'Scroll within each preview to see the complete interface, or open the image at full size.' : 'Desloque cada pré-visualização para consultar a interface completa, ou abra a imagem no tamanho original.'}</p>}
           {images.map((image, index) => <figure>
+            <div class={uniformScreenshots ? 'screenshot-viewport' : undefined} tabindex={uniformScreenshots ? 0 : undefined} role={uniformScreenshots ? 'region' : undefined} aria-label={uniformScreenshots ? `${english ? 'Scrollable capture' : 'Captura com deslocamento'}: ${image.alt}` : undefined}>
             <a href={`${base}${image.src.replace(/^\/+/, '')}`} target="_blank" rel="noopener noreferrer" aria-label={`${english ? 'Open image' : 'Abrir imagem'}: ${image.alt}`}>
               <img src={`${base}${image.src.replace(/^\/+/, '')}`} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
             </a>
+            </div>
             <figcaption><span class="project-index">{String(index + 1).padStart(2, '0')}</span> {image.alt}</figcaption>
           </figure>)}
         </section>}
