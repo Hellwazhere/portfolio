@@ -7,7 +7,7 @@ const { project, alternateHref } = Astro.props;
 const { Content, headings } = await render(project);
 const { locale, title, description, kind, tags, images, demoUrl, sourceUrl } = project.data;
 const english = locale === 'en';
-const uniformScreenshots = ['marketing-dashboard', 'content-assistant'].includes(project.data.translationKey ?? '');
+const uniformScreenshots = ['marketing-dashboard', 'content-assistant', 'myjobs'].includes(project.data.translationKey ?? '');
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const projectsHref = `${base}${english ? 'en/' : ''}projects/`;
 const sections = headings.filter((heading) => heading.depth === 2);

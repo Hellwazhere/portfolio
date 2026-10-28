@@ -26,7 +26,7 @@ export async function getCaseStudyPages(locale: Locale) {
 
 export async function getProjects(locale: Locale) {
   const entries = await getCollection('projects', ({ data }) => data.locale === locale);
-  const order = ['smart-clinic-assistant', 'business-website', 'marketing-dashboard', 'content-assistant'];
+  const order = ['smart-clinic-assistant', 'business-website', 'marketing-dashboard', 'content-assistant', 'myjobs'];
   const position = (entry: (typeof entries)[number]) => {
     const key = entry.data.translationKey ?? entry.id.split('/').at(-1);
     const index = key ? order.indexOf(key) : -1;
