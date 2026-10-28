@@ -2,3 +2,6 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Raw working screenshots; only optimised WebP files are public
+docs/pedro-captures/

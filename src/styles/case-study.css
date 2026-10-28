@@ -47,3 +47,5 @@
   .case-study-index ol { columns: 1; }
   .case-study-footer { flex-direction: column; align-items: flex-start; padding-bottom: 48px; }
 }
+
+.case-study-pedro .case-study-gallery figure:last-child > div { max-width: 375px; margin-inline: auto; }

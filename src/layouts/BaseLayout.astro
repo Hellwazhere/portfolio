@@ -12,6 +12,8 @@ const routePath = pathname === baseRoot || pathname === base
   : pathname.startsWith(`${baseRoot}/`)
     ? pathname.slice(baseRoot.length + 1).replace(/^\/+/, '')
     : pathname.replace(/^\/+/, '');
+const translatedPath = alternateHref ?? (locale === 'en' ? base + routePath.replace(/^en\//, '') : base + 'en/' + routePath);
+const translatedUrl = Astro.site ? new URL(translatedPath, Astro.site) : undefined;
 const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : undefined;
 ---
 <!doctype html>
@@ -33,6 +35,7 @@ const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : unde
       })();
     </script>
     {canonical && <link rel="canonical" href={canonical} />}
+    {canonical && translatedUrl && <><link rel="alternate" hreflang={locale === 'pt' ? 'pt-PT' : 'en'} href={canonical} /><link rel="alternate" hreflang={locale === 'pt' ? 'en' : 'pt-PT'} href={translatedUrl} /></>}
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <title>{title} · Tiago Santos</title>
   </head>
