@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/pauta-editor.jpg
-    alt: Editor real do Pauta com texto fictício, campos editáveis, aviso de assistência por modelos e opções de estado e exportação.
+    width: 1440
+    height: 2400
+    alt: "Editor do Pauta com conteúdo fictício, modelos determinísticos sem IA generativa, estado Planeado, data prevista e exportação TXT."
+  - src: /images/projects/pauta-library.jpg
+    width: 1440
+    height: 2400
+    alt: "Biblioteca do Pauta com conteúdo fictício planeado, pesquisa, filtros de canal e estado, ordenação, selecção CSV e acções de gestão."
 ---
 
 ## Contexto e problema
@@ -47,7 +53,7 @@ Um repositório versionado em `localStorage` preserva a biblioteca, o briefing e
 
 **24 testes automatizados aprovados.** Cobrem briefing, influência dos campos, determinismo, criação/actualização, cópias, estados, pesquisa, datas, exportação, importação, corrupção, quota e conflitos através de um adaptador de armazenamento em memória.
 
-Os registos de verificação documentam o fluxo completo no browser, downloads reais, confirmação de remoção e restauração JSON. A captura mostra o editor no preview local com conteúdo fictício. Testes de armazenamento em memória não equivalem a provocar todas as falhas num browser real.
+Os registos de verificação documentam o fluxo completo no browser, downloads reais, confirmação de remoção e restauração JSON. As capturas mostram o editor e a biblioteca da demonstração pública com conteúdo fictício. Testes de armazenamento em memória não equivalem a provocar todas as falhas num browser real.
 
 ## Limitações e disponibilidade
 

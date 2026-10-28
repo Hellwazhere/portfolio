@@ -12,7 +12,7 @@ const projectsHref = `${base}${english ? 'en/' : ''}projects/`;
 const sections = headings.filter((heading) => heading.depth === 2);
 const captureIntro = title === 'Smart Clinic Assistant'
   ? (english ? 'Real captures of the public demonstration in Portuguese, using fictional identities and preset messages. Open each image to inspect it at full size.' : 'Capturas reais da demonstração pública em português, com identidades fictícias e mensagens predefinidas. Abra cada imagem para a consultar no tamanho original.')
-  : (english ? 'Real captures of the local application in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da aplicação local em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.');
+  : (english ? 'Real captures of the public demonstration in Portuguese, using demonstration data. Open each image to inspect it at full size.' : 'Capturas reais da demonstração pública em português, com dados de demonstração. Abra cada imagem para a consultar no tamanho original.');
 ---
 <BaseLayout locale={locale} active="projects" alternateHref={alternateHref} title={`${title} · ${english ? 'Case study' : 'Estudo de caso'}`} description={description}>
   <article class="case-study">

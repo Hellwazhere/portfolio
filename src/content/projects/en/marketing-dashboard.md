@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/prisma-dashboard.jpg
-    alt: Actual PRISMA dashboard with a synthetic-data notice, eight metrics, time series, channel comparisons and campaign table.
+    width: 1440
+    height: 2400
+    alt: "PRISMA overview with eight metrics, charts, channel comparisons and a table of seven fictional campaigns."
+  - src: /images/projects/prisma-filtered.jpg
+    width: 1440
+    height: 2400
+    alt: "PRISMA with Paid search and Last 7 days filters applied, recalculated metrics and two campaigns sorted by name."
 ---
 
 ## Context and objectives
@@ -50,7 +56,7 @@ Filters can be combined, with date shortcuts and a reset option. Invalid dates p
 
 Data, calculations, formatting, charts, presentation and export are separate modules. Analytical functions do not depend on the DOM. HTML, CSS and JavaScript modules are served by native Node.js tools, without npm dependencies or a charting library.
 
-**19 automated tests passed.** They cover formulas, weighted aggregation, data integrity, filters, cross-view consistency, sorting, zero denominators, CSV and the server. Verification records document browser interactions, a real download and responsive checks; the capture was taken from the local preview.
+**19 automated tests passed.** They cover formulas, weighted aggregation, data integrity, filters, cross-view consistency, sorting, zero denominators, CSV and the server. Verification records document browser interactions, a real download and responsive checks; the public demonstration captures show the overview and a filtered selection.
 
 ## Limitations
 

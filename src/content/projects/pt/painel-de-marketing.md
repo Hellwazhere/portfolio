@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/prisma-dashboard.jpg
-    alt: Dashboard real PRISMA com aviso de dados fictícios, oito indicadores, evolução temporal, canais e tabela de campanhas.
+    width: 1440
+    height: 2400
+    alt: "Visão geral do PRISMA com oito indicadores, gráficos, comparação de canais e tabela de sete campanhas fictícias."
+  - src: /images/projects/prisma-filtered.jpg
+    width: 1440
+    height: 2400
+    alt: "PRISMA com filtro Pesquisa paga e Últimos 7 dias aplicados, indicadores recalculados e tabela de duas campanhas ordenada por nome."
 ---
 
 ## Contexto e objectivos
@@ -50,7 +56,7 @@ Os filtros combinam-se, têm atalhos e reposição. Datas inválidas impedem apr
 
 Dados, cálculos, formatação, gráficos, apresentação e exportação são módulos distintos. As funções analíticas não dependem do DOM. HTML, CSS e JavaScript modular são servidos por ferramentas nativas do Node.js, sem dependências npm ou biblioteca de gráficos.
 
-**19 testes automatizados aprovados.** Incluem fórmulas, agregação ponderada, integridade dos dados, filtros, coerência entre vistas, ordenação, denominadores zero, CSV e servidor. Os registos de verificação documentam interacções no browser, download real e responsividade; a captura foi recolhida no preview local.
+**19 testes automatizados aprovados.** Incluem fórmulas, agregação ponderada, integridade dos dados, filtros, coerência entre vistas, ordenação, denominadores zero, CSV e servidor. Os registos de verificação documentam interacções no browser, download real e responsividade; as capturas da demonstração pública mostram a visão geral e uma selecção filtrada.
 
 ## Limitações
 

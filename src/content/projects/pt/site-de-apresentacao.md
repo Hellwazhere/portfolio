@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/forma-grao-home.jpg
-    alt: Homepage real do Forma & Grão, com aviso de marca fictícia, apresentação dos serviços e ilustração original de mobiliário.
+    width: 1440
+    height: 2720
+    alt: "Homepage do Forma & Grão com apresentação do atelier fictício, ilustração de mobiliário, serviços e percurso de contacto."
+  - src: /images/projects/forma-grao-services.jpg
+    width: 1440
+    height: 2720
+    alt: "Página de serviços do Forma & Grão, com mobiliário por medida, restauro e planeamento de interiores, acesso ao pedido de exemplo."
 ---
 
 ## Contexto e problema
@@ -48,7 +54,7 @@ O Node.js nativo gera os ficheiros estáticos e serve o preview. Não há depend
 
 **12 testes automatizados aprovados.** A suite cobre validação, limites, normalização, resumo, rotas, recursos, âncoras, estrutura acessível e comportamento do servidor local.
 
-Os registos de verificação da aplicação documentam ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. A captura desta página foi obtida no preview local. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
+Os registos de verificação da aplicação documentam ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. As capturas mostram a homepage e a página de serviços da demonstração pública. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
 
 ## Limitações e disponibilidade
 

@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/forma-grao-home.jpg
-    alt: Actual Forma & Grão homepage showing the fictional-brand notice, service introduction and original furniture illustration.
+    width: 1440
+    height: 2720
+    alt: "Forma & Grão homepage with the fictional workshop introduction, furniture illustration, services and contact journey."
+  - src: /images/projects/forma-grao-services.jpg
+    width: 1440
+    height: 2720
+    alt: "Forma & Grão services page showing bespoke furniture, restoration and interior planning, links to a sample request."
 ---
 
 ## Context and problem
@@ -48,7 +54,7 @@ Native Node.js tools generate static files and serve the preview. There are no n
 
 **12 automated tests passed.** The suite covers validation, boundaries, normalisation, the summary, routes, assets, anchors, accessible structure and local-server behaviour.
 
-The application's verification record also documents form/download checks, keyboard use and four viewport widths. The capture on this page was taken from the local preview. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
+The application's verification record also documents form/download checks, keyboard use and four viewport widths. The captures show the public demonstration homepage and services page. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
 
 ## Limitations and availability
 

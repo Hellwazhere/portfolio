@@ -14,7 +14,13 @@ tags:
   - Node.js
 images:
   - src: /images/projects/pauta-editor.jpg
-    alt: Actual Pauta editor showing fictional text, editable fields, the template-assistance notice, status controls and exports.
+    width: 1440
+    height: 2400
+    alt: "Pauta editor with fictional content, deterministic templates without generative AI, Planned status, a scheduled date and TXT export."
+  - src: /images/projects/pauta-library.jpg
+    width: 1440
+    height: 2400
+    alt: "Pauta library with fictional planned content, search, channel and status filters, sorting, CSV selection and management actions."
 ---
 
 ## Context and problem
@@ -47,7 +53,7 @@ A versioned `localStorage` repository preserves the library, brief and work-in-p
 
 **24 automated tests passed.** They cover briefs, input influence, determinism, creation/updates, copies, statuses, search, dates, exports, imports, corruption, quota and conflicts using an in-memory storage adapter.
 
-Verification records document the complete browser journey, actual downloads, deletion confirmation and JSON restoration. The capture shows the local editor with fictional content. In-memory storage tests do not mean every failure has been induced in a real browser.
+Verification records document the complete browser journey, actual downloads, deletion confirmation and JSON restoration. The captures show the public demonstration editor and library with fictional content. In-memory storage tests do not mean every failure has been induced in a real browser.
 
 ## Limitations and availability
 
