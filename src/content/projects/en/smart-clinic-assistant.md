@@ -28,7 +28,7 @@ images:
 
 ## Context and goal
 
-Smart Clinic Assistant is a **public fictional demonstration**, available on GitHub Pages, of a request and administrative-management workflow. It is not intended for real bookings or real clinical or personal data. The exercise explores information organisation and interface clarity.
+Smart Clinic Assistant is a **public fictional demonstration**, available on GitHub Pages, of a request and administrative-management workflow. It is not intended for real bookings or real clinical or personal data. The exercise combines a simulation form with a dashboard for search and status management, exploring information organisation and interface clarity.
 
 It does not represent work for a clinic, a production booking service or a clinically validated product. The dashboard is public and has no access control.
 

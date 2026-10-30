@@ -27,7 +27,7 @@ images:
 
 Um pequeno negócio precisa de explicar o que faz, como trabalha e qual o próximo passo para quem chega ao website. O Forma & Grão transforma esse problema num projecto pessoal: um atelier **inteiramente fictício** de mobiliário por medida, restauro e planeamento de interiores.
 
-O objectivo foi construir uma experiência completa e verificável, da descoberta dos serviços à preparação de um pedido. Não é trabalho contratado, nem representa uma empresa em actividade, clientes ou resultados comerciais.
+A solução apresenta serviços e percurso de contacto, criando uma experiência verificável desde a descoberta do atelier até à preparação de um pedido. Não é trabalho contratado, nem representa uma empresa em actividade, clientes ou resultados comerciais.
 
 ## Solução e percurso de utilização
 

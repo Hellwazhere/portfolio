@@ -29,7 +29,7 @@ images:
 
 ## Contexto e objectivos
 
-O MyJobs é um projecto pessoal para organizar uma procura de emprego: explorar oportunidades, seleccionar anúncios e acompanhar candidaturas sem dispersar notas e estados por várias ferramentas. A demonstração pública é interactiva e usa exclusivamente anúncios fictícios; não procura vagas reais nem envia candidaturas.
+O MyJobs é um projecto pessoal para organizar uma procura de emprego: explorar oportunidades, seleccionar anúncios e acompanhar candidaturas sem dispersar notas e estados por várias ferramentas. A solução reúne pesquisa, favoritos, arquivo local e acompanhamento de estados e notas. A demonstração pública é interactiva e usa exclusivamente anúncios fictícios; não procura vagas reais nem envia candidaturas.
 
 ## Pesquisa e selecção
 

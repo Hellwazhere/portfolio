@@ -28,7 +28,7 @@ images:
 
 ## Contexto e objectivo
 
-O Smart Clinic Assistant é uma **demonstração pública e fictícia**, disponível no GitHub Pages, de um fluxo de pedidos e gestão administrativa. Não se destina a marcações reais nem a dados clínicos ou pessoais reais. O exercício permite explorar a organização da informação e a clareza da interface.
+O Smart Clinic Assistant é uma **demonstração pública e fictícia**, disponível no GitHub Pages, de um fluxo de pedidos e gestão administrativa. Não se destina a marcações reais nem a dados clínicos ou pessoais reais. O exercício combina um formulário de simulação com um dashboard de pesquisa e gestão de estados, explorando a organização da informação e a clareza da interface.
 
 Não representa trabalho para uma clínica, um serviço de marcações em produção ou um produto clínico validado. O dashboard é público e não tem controlo de acesso.
 

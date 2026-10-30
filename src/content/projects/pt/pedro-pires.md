@@ -25,7 +25,7 @@ images:
 
 ## Contexto e objectivo
 
-Desenvolvi um website profissional para apresentar o trabalho do ilustrador **Pedro Pires**. O objectivo foi dar prioridade às imagens, com uma navegação simples e versões em português e inglês.
+Desenvolvi um website profissional para apresentar o trabalho do ilustrador **Pedro Pires**. Para dar prioridade às imagens, a solução combina uma galeria filtrável e visualização ampliada com navegação simples e versões em português e inglês.
 
 ## Autoria e responsabilidades
 

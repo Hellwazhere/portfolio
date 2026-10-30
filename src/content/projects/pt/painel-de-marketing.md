@@ -25,7 +25,7 @@ images:
 
 ## Contexto e objectivos
 
-O PRISMA é um projecto pessoal para explorar um problema de marketing digital: transformar observações de campanhas numa leitura coerente de investimento, interacções e conversões. O público demonstrativo é um profissional que precisa de filtrar dados e compreender o que cada indicador representa.
+O PRISMA é um projecto pessoal para explorar um problema de marketing digital: transformar observações de campanhas numa leitura coerente de investimento, interacções e conversões. A solução combina filtros, indicadores, gráficos e exportação CSV para explorar os dados e compreender o que cada indicador representa.
 
 Todos os valores são **sintéticos e locais**. Não são resultados históricos, trabalho de clientes ou evidência de desempenho comercial. A aplicação não está ligada a plataformas de publicidade.
 

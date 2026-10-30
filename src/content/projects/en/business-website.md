@@ -27,7 +27,7 @@ images:
 
 A small business needs to explain its services, its approach and what a visitor can do next. Forma & Grão turns that problem into a personal project: an **entirely fictional** furniture, restoration and interior-planning workshop.
 
-The aim was a complete, verifiable journey from discovering services to preparing a request. This is not commissioned work and does not represent a trading business, clients or commercial results.
+The solution presents the services and contact journey, creating a verifiable path from discovering the workshop to preparing a request. This is not commissioned work and does not represent a trading business, clients or commercial results.
 
 ## Solution and visitor journey
 

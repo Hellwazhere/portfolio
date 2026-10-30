@@ -25,7 +25,7 @@ images:
 
 ## Context and objective
 
-I developed a professional website to present illustrator **Pedro Pires’s** work. The objective was to put the images first, with simple navigation and Portuguese and English versions.
+I developed a professional website to present illustrator **Pedro Pires’s** work. To put the images first, the solution combines a filterable gallery and enlarged viewing with simple navigation and Portuguese and English versions.
 
 ## Authorship and responsibilities
 

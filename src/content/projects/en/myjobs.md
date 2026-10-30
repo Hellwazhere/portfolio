@@ -29,7 +29,7 @@ images:
 
 ## Context and goals
 
-MyJobs is a personal project for organising a job search: exploring opportunities, selecting listings and tracking applications without scattering notes and statuses across tools. The public demo is interactive and uses fictional listings exclusively. It does not search for real vacancies or submit applications.
+MyJobs is a personal project for organising a job search: exploring opportunities, selecting listings and tracking applications without scattering notes and statuses across tools. The solution brings together search, favorites, a local archive, and tracking for statuses and notes. The public demo is interactive and uses fictional listings exclusively. It does not search for real vacancies or submit applications.
 
 ## Search and selection
 

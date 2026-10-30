@@ -25,7 +25,7 @@ images:
 
 ## Context and problem
 
-Pauta is a personal editorial-productivity application for small businesses, marketing professionals and content creators. It addresses the journey from an initial idea to a reviewed draft organised by publication date.
+Pauta is a personal editorial-productivity application for small businesses, marketing professionals and content creators. It brings together a briefing, editor, library and planning view to organise the journey from an idea to a reviewed draft with a planned publication date.
 
 The application runs entirely in the browser. Assistance comes from **deterministic rules and templates**, not generative AI. AI-assisted development must not be confused with an AI integration in the delivered application.
 

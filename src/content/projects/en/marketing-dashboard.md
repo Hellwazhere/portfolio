@@ -25,7 +25,7 @@ images:
 
 ## Context and objectives
 
-PRISMA is a personal project exploring a digital marketing problem: turning campaign observations into a consistent view of spend, interactions and conversions. Its demonstration audience is a professional who needs to filter data and understand what each metric means.
+PRISMA is a personal project exploring a digital marketing problem: turning campaign observations into a consistent view of spend, interactions and conversions. The solution combines filters, metrics, charts and CSV export to explore the data and make each metric understandable.
 
 All values are **synthetic and local**. They are not historical results, client work or evidence of commercial performance. The application is not connected to advertising platforms.
 

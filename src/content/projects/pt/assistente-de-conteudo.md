@@ -25,7 +25,7 @@ images:
 
 ## Contexto e problema
 
-O Pauta é uma aplicação pessoal de produtividade editorial para pequenos negócios, profissionais de marketing e criadores de conteúdo. Aborda o percurso entre uma ideia inicial, um rascunho revisto e uma publicação organizada por data.
+O Pauta é uma aplicação pessoal de produtividade editorial para pequenos negócios, profissionais de marketing e criadores de conteúdo. Reúne briefing, editor, biblioteca e planeamento para organizar o percurso de uma ideia até um rascunho revisto, com data prevista de publicação.
 
 A aplicação funciona inteiramente no navegador. A assistência é feita por **regras e modelos determinísticos**, não por IA generativa. O desenvolvimento com assistência de IA não deve ser confundido com uma integração de IA na aplicação entregue.
 
