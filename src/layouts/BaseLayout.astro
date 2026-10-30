@@ -15,6 +15,8 @@ const routePath = pathname === baseRoot || pathname === base
 const translatedPath = alternateHref ?? (locale === 'en' ? base + routePath.replace(/^en\//, '') : base + 'en/' + routePath);
 const translatedUrl = Astro.site ? new URL(translatedPath, Astro.site) : undefined;
 const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : undefined;
+const socialImage = Astro.site ? new URL(`${base}images/brand/social-card.png`, Astro.site) : undefined;
+const socialTitle = `${title} · Tiago Santos`;
 ---
 <!doctype html>
 <html lang={locale === 'pt' ? 'pt-PT' : 'en'} data-theme="dark">
@@ -22,6 +24,16 @@ const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : unde
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={socialTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={locale === 'pt' ? 'pt_PT' : 'en_GB'} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    {socialImage && <><meta property="og:image" content={socialImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Tiago Santos · Portfolio" /></>}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={socialTitle} />
+    <meta name="twitter:description" content={description} />
+    {socialImage && <meta name="twitter:image" content={socialImage} />}
     <meta name="theme-color" content="#f5f2eb" />
     <script is:inline>
       (() => {

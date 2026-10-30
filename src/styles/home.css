@@ -24,3 +24,6 @@
 
 :root .home-project-image { width:100%; aspect-ratio:16 / 7; overflow:hidden; margin-bottom:20px; background:var(--surface); }
 :root .home-project-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:top center; }
+
+:root .home-project-external { position:relative; z-index:2; display:flex; flex-wrap:wrap; gap:4px 22px; margin-top:4px; }
+:root .home-project-external .text-link { display:inline-flex; align-items:center; gap:6px; min-height:44px; }
