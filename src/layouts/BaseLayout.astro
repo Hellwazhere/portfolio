@@ -36,7 +36,12 @@ const canonical = Astro.site ? new URL(`${base}${routePath}`, Astro.site) : unde
     </script>
     {canonical && <link rel="canonical" href={canonical} />}
     {canonical && translatedUrl && <><link rel="alternate" hreflang={locale === 'pt' ? 'pt-PT' : 'en'} href={canonical} /><link rel="alternate" hreflang={locale === 'pt' ? 'en' : 'pt-PT'} href={translatedUrl} /></>}
-    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}favicon-16.png`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32.png`} />
+    <link rel="icon" type="image/png" sizes="192x192" href={`${base}favicon-192.png`} />
+    <link rel="icon" type="image/png" sizes="512x512" href={`${base}favicon-512.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}favicon-180.png`} />
     <title>{title} · Tiago Santos</title>
   </head>
   <body>

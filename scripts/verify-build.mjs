@@ -11,7 +11,7 @@ for (const prefix of ['', 'en/']) {
   assert.ok(home.indexOf('featured-artist') < home.indexOf('class="home-project-card"')); checks++;
   const page = read(prefix + 'projects/pedro-pires/index.html');
   assert.ok(page.includes('81') && page.includes('Pedro Pires') && page.includes('hreflang="en"') && page.includes('hreflang="pt-PT"')); checks++;
-  assert.equal((page.match(/<img /g) || []).length, 3); checks++;
+  assert.equal((page.match(new RegExp('<img [^>]*src="[^"]*/images/projects/pedro-pires/', 'g')) || []).length, 3); checks++;
 }
 const htmlFiles = dir => readdirSync(dir, {withFileTypes:true}).flatMap(e => e.isDirectory() ? htmlFiles(join(dir,e.name)) : e.name.endsWith('.html') ? [join(dir,e.name)] : []);
 for(const file of htmlFiles('dist')) {
