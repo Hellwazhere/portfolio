@@ -15,12 +15,14 @@ const href = projectHref(locale, project.slug);
   {image && <a class="featured-artist-image" href={href} aria-label={en ? 'Read the Pedro Pires case study' : 'Ver o estudo de caso Pedro Pires'}><img src={base + image.src.replace(/^\/+/, '')} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" /></a>}
 </article>
 <style>
-.featured-artist { display:grid; grid-template-columns:minmax(0, .45fr) minmax(0, .55fr); align-items:center; gap:clamp(24px, 3vw, 44px); margin-bottom:24px; padding-block:28px; border-block:1px solid var(--line); }
+.featured-artist { display:grid; grid-template-columns:minmax(0, .45fr) minmax(0, .55fr); align-items:center; gap:clamp(24px, 3vw, 44px); margin-bottom:24px; padding-block:24px; border-block:1px solid var(--line); }
 .featured-artist-image { display:block; min-width:0; }
 .featured-artist-image img { display:block; width:100%; height:auto; }
 .featured-artist-body { min-width:0; }
-h3 { font:600 clamp(26px, 2.6vw, 38px)/1.12 var(--display); letter-spacing:-.045em; margin:12px 0 18px; overflow-wrap:anywhere; }
+h3 { font:600 clamp(26px, 2.3vw, 34px)/1.12 var(--display); letter-spacing:-.045em; margin:12px 0 18px; overflow-wrap:anywhere; }
 p { margin:0 0 18px; }
+.featured-artist-body > div:last-child > p { max-width:60ch; color:var(--muted); font-size:15px; line-height:1.7; }
+.featured-artist-links a { display:inline-flex; align-items:center; min-height:44px; }
 .project-kind { margin:12px 0 0; }
 .featured-artist-links { display:flex; flex-wrap:wrap; gap:12px 22px; margin-top:20px; }
 @media (min-width:701px) and (max-width:900px) {

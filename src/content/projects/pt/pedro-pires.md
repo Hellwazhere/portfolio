@@ -12,7 +12,7 @@ images:
   - src: /images/projects/pedro-pires/home.webp
     width: 1425
     height: 1089
-    alt: "Homepage publicada com a assinatura Pedro Pires, frase de abertura e composição de cinco painéis ilustrados."
+    alt: "Homepage publicada com a assinatura Pedro Pires, navegação e composição de cinco painéis ilustrados."
   - src: /images/projects/pedro-pires/gallery.webp
     width: 1425
     height: 1089

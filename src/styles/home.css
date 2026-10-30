@@ -1,0 +1,23 @@
+/* Homepage refinements shared by PT/EN; other page layouts stay unchanged. */
+:root .home-hero { grid-template-columns:minmax(0, 1fr) auto; gap:clamp(24px,4vw,56px); min-height:0; padding-block:clamp(48px,6vw,80px); }
+:root .home-hero-copy { min-width:0; }
+:root .home-hero h1 { max-width:22ch; margin:0 0 24px; font:600 clamp(32px,4vw,56px)/1.12 var(--display); letter-spacing:-.05em; text-wrap:balance; overflow-wrap:break-word; }
+:root .home-hero-subtitle { max-width:48ch; font-size:clamp(19px,1.7vw,23px); line-height:1.4; letter-spacing:-.025em; }
+:root .home-hero-description { max-width:66ch; line-height:1.7; }
+:root .signature-name { font-size:21px; letter-spacing:.025em; }
+:root .home-profile, :root .home-areas, :root .home-contact { padding-block:clamp(44px,5vw,72px); }
+:root .home-projects { padding-block:clamp(44px,5vw,72px); }
+:root .home-profile-grid h2, :root .home-contact h2 { font-size:clamp(30px,3.7vw,46px); line-height:1.13; letter-spacing:-.045em; text-wrap:balance; }
+:root .home-projects .section-heading h2, :root .home-areas .section-heading h2 { font-size:clamp(30px,3.7vw,46px); line-height:1.13; letter-spacing:-.045em; text-wrap:balance; }
+:root .home-project-card { min-height:0; padding:clamp(22px,2.5vw,32px); box-shadow:none; }
+:root .home-project-card:hover { transform:none; box-shadow:none; }
+:root .home-project-card .project-index { margin-bottom:16px; }
+:root .home-project-card .project-kind { margin-bottom:10px; }
+:root .home-project-card h3 { font-size:clamp(24px,2.1vw,30px); line-height:1.2; text-wrap:balance; }
+:root .home-project-card p { margin:0 0 20px; font-size:15px; line-height:1.7; }
+:root .home-project-card .home-case-study-link { margin-top:14px; }
+:root .home-project-art { display:none; }
+@media(max-width:850px) {
+:root .home-hero { grid-template-columns:minmax(0,1fr); gap:28px; }
+:root .home-hero-signature { justify-self:start; }
+}

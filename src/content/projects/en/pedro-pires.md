@@ -12,7 +12,7 @@ images:
   - src: /images/projects/pedro-pires/home.webp
     width: 1425
     height: 1089
-    alt: "Published Homepage with the Pedro Pires identity, opening line and composition of five illustrated panels."
+    alt: "Published Homepage with the Pedro Pires identity, navigation and composition of five illustrated panels."
   - src: /images/projects/pedro-pires/gallery.webp
     width: 1425
     height: 1089
