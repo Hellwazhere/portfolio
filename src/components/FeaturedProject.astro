@@ -12,7 +12,7 @@ const href = projectHref(locale, project.slug);
     <div><span class="project-index">{en ? 'FEATURED / 01' : 'DESTAQUE / 01'}</span><p class="project-kind">{project.kind}</p><h3>{project.title}</h3></div>
     <div><p>{project.description}</p><div class="tag-list">{project.tags.map(tag => <span class="tag">{tag}</span>)}</div><div class="featured-artist-links"><a class="text-link" href={href}>{en ? 'Read case study' : 'Ver estudo de caso'} →</a><a class="text-link" href={project.demoUrl} target="_blank" rel="noopener noreferrer">{en ? 'Visit website' : 'Visitar website'} ↗</a><a class="text-link" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
   </div>
-  {image && <a class="featured-artist-image" href={href} aria-label={en ? 'Read the Pedro Pires case study' : 'Ver o estudo de caso Pedro Pires'}><img src={base + image.src.replace(/^\/+/, '')} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" /></a>}
+  {image && <a class="featured-artist-image" href={href} aria-label={en ? 'Read the Pedro Pires case study' : 'Ver o estudo de caso Pedro Pires'}><img src={`${base}images/projects/pedro-pires/home-720.webp`} srcset={`${base}images/projects/pedro-pires/home-720.webp 720w, ${base + image.src.replace(/^\/+/, '')} 1425w`} sizes="(max-width: 700px) calc(100vw - 36px), (max-width: 1176px) calc(55vw - 48.4px), 597px" alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" /></a>}
 </article>
 <style>
 .featured-artist { display:grid; grid-template-columns:minmax(0, .45fr) minmax(0, .55fr); align-items:center; gap:clamp(24px, 3vw, 44px); margin-bottom:24px; padding-block:24px; border-block:1px solid var(--line); }

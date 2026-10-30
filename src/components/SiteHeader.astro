@@ -12,7 +12,7 @@ const languageHref = alternateHref ?? (isEnglish ? `${base}${active ? `${active}
 <a class="skip-link" href="#main">{isEnglish ? 'Skip to content' : 'Saltar para o conteúdo'}</a>
 <header class="site-header">
   <div class="container header-inner">
-    <a class:list={['wordmark', active === '' && 'wordmark-home']} href={route()}><img class="wordmark-logo" src={`${base}images/brand/navbar-logo.png`} alt="" width="256" height="256" decoding="async" />{active === '' ? <><span class="wordmark-name">Tiago Santos</span><span class="wordmark-label">Portfolio</span></> : 'Tiago Santos · Portfolio'}</a>
+    <a class:list={['wordmark', active === '' && 'wordmark-home']} href={route()}><img class="wordmark-logo" src={`${base}images/brand/navbar-logo.webp`} alt="" width="216" height="216" decoding="async" />{active === '' ? <><span class="wordmark-name">Tiago Santos</span><span class="wordmark-label">Portfolio</span></> : 'Tiago Santos · Portfolio'}</a>
     <div class="nav-wrap">
       <nav class="primary-nav" aria-label={isEnglish ? 'Main navigation' : 'Navegação principal'}>
         <a href={route()} aria-current={active === '' ? 'page' : undefined}>{labels.home}</a>
