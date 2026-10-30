@@ -13,13 +13,13 @@ tags:
   - JavaScript
   - Node.js
 images:
-  - src: /images/projects/forma-grao-home.jpg
+  - src: /images/projects/forma-grao-home.webp
     width: 1440
-    height: 2720
-    alt: "Forma & Grão homepage with the fictional workshop introduction, furniture illustration, services and contact journey."
-  - src: /images/projects/forma-grao-services.jpg
+    height: 2643
+    alt: "Forma & Grão homepage with the fictional workshop introduction, an interior image with wooden furniture, services and contact journey."
+  - src: /images/projects/forma-grao-services.webp
     width: 1440
-    height: 2720
+    height: 2723
     alt: "Forma & Grão services page showing bespoke furniture, restoration and interior planning, links to a sample request."
 ---
 
@@ -42,7 +42,7 @@ The contact page completes the journey with a practical workflow that needs no b
 - Field-associated errors, a focusable error summary and accessible status messages.
 - A text preview and actual UTF-8 download; subsequent edits invalidate the preview to prevent exporting an outdated version.
 - Field clearing and `textContent` rendering, without interpreting entered HTML.
-- Responsive layout, visible focus and an original SVG illustration with alternative text and explicit dimensions.
+- Responsive layout, visible focus, a WebP hero image and an SVG illustration on the about page, with alternative text and explicit dimensions.
 
 ## Architecture and technical choices
 
@@ -54,7 +54,7 @@ Native Node.js tools generate static files and serve the preview. There are no n
 
 **12 automated tests passed.** The suite covers validation, boundaries, normalisation, the summary, routes, assets, anchors, accessible structure and local-server behaviour.
 
-The application's verification record also documents form/download checks, keyboard use and four viewport widths. The captures show the public demonstration homepage and services page. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
+The application's verification record also documents form/download checks, keyboard use and four viewport widths. The captures show the homepage and services page of the published demonstration. Technical tests and visual inspection do not constitute user research or a complete accessibility audit.
 
 ## Limitations and availability
 

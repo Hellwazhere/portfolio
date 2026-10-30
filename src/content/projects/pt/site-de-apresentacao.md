@@ -13,13 +13,13 @@ tags:
   - JavaScript
   - Node.js
 images:
-  - src: /images/projects/forma-grao-home.jpg
+  - src: /images/projects/forma-grao-home.webp
     width: 1440
-    height: 2720
-    alt: "Homepage do Forma & Grão com apresentação do atelier fictício, ilustração de mobiliário, serviços e percurso de contacto."
-  - src: /images/projects/forma-grao-services.jpg
+    height: 2643
+    alt: "Homepage do Forma & Grão com apresentação do atelier fictício, imagem de um interior com mobiliário de madeira, serviços e percurso de contacto."
+  - src: /images/projects/forma-grao-services.webp
     width: 1440
-    height: 2720
+    height: 2723
     alt: "Página de serviços do Forma & Grão, com mobiliário por medida, restauro e planeamento de interiores, acesso ao pedido de exemplo."
 ---
 
@@ -42,7 +42,7 @@ O contacto fecha o percurso com uma alternativa honesta a um formulário sem bac
 - Erros associados aos campos, resumo focável e mensagens de estado acessíveis.
 - Resumo textual e download real em UTF-8; alterações posteriores invalidam o resumo para evitar exportar uma versão desactualizada.
 - Limpeza dos campos e apresentação de texto com `textContent`, sem interpretar HTML introduzido.
-- Layout responsivo, foco visível e ilustração SVG original, com texto alternativo e dimensões definidas.
+- Layout responsivo, foco visível, imagem principal em WebP e ilustração SVG na página sobre, com texto alternativo e dimensões definidas.
 
 ## Arquitectura e decisões técnicas
 
@@ -54,7 +54,7 @@ O Node.js nativo gera os ficheiros estáticos e serve o preview. Não há depend
 
 **12 testes automatizados aprovados.** A suite cobre validação, limites, normalização, resumo, rotas, recursos, âncoras, estrutura acessível e comportamento do servidor local.
 
-Os registos de verificação da aplicação documentam ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. As capturas mostram a homepage e a página de serviços da demonstração pública. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
+Os registos de verificação da aplicação documentam ensaios do formulário e do ficheiro descarregado, teclado e quatro larguras de ecrã. As capturas mostram a homepage e a página de serviços da demonstração publicada. Testes técnicos e revisão visual não equivalem a testes com utilizadores ou a uma auditoria integral de acessibilidade.
 
 ## Limitações e disponibilidade
 
